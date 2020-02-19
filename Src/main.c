@@ -611,6 +611,7 @@ int main(void) {
 				wait_ms(1000);
 				reset_ICM();
 				angle = 0;
+				angle = 0;
 				HAL_GPIO_WritePin(L_MOTOR_IN2_GPIO_Port, L_MOTOR_IN2_Pin,
 						GPIO_PIN_SET);
 				HAL_GPIO_WritePin(L_MOTOR_IN1_GPIO_Port, L_MOTOR_IN1_Pin,
