@@ -1,0 +1,2 @@
+SENSOR_control.c:13:6:callback_SENSOR	16	static
+SENSOR_control.c:168:6:sensor_line	360	static

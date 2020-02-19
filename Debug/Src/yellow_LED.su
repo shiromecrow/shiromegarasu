@@ -1,0 +1,3 @@
+yellow_LED.c:89:6:yellow_off	8	static
+yellow_LED.c:99:6:yellow_on	8	static
+yellow_LED.c:111:6:yellow_count	32	static

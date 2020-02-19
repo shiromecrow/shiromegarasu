@@ -1,0 +1,10 @@
+maze_wall.c:27:6:maze_clear	56	static
+maze_wall.c:104:6:maze_maker	96	static
+maze_wall.c:325:6:maze_maker2	80	static
+maze_wall.c:581:6:maze_makerhosuu	96	static
+maze_wall.c:666:6:maze_makerST	112	static
+maze_wall.c:802:6:maze_makerRun	96	static
+maze_wall.c:1056:6:maze_makeronly	20	static
+maze_wall.c:1193:6:maze_makerback	80	static
+maze_wall.c:1442:6:maze_makerslant	104	static
+maze_wall.c:1598:6:maze_display	32	static

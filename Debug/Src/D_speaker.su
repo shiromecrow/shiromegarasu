@@ -1,0 +1,12 @@
+D_speaker.c:25:10:calSoundCount	8	static
+D_speaker.c:35:6:MakeMusicScale	24	static
+D_speaker.c:53:6:interupt_Sound	40	static
+D_speaker.c:83:6:interupt_oneSound	32	static
+D_speaker.c:118:6:playSoundData	32	static
+D_speaker.c:138:6:inputZelda_nazo	0	static
+D_speaker.c:158:6:inputunknow_story	36	static
+D_speaker.c:1847:6:inputtyounen	36	static
+D_speaker.c:3164:6:inputZelda_song	36	static
+D_speaker.c:3363:6:inputitem_get	0	static
+D_speaker.c:3377:6:inputseria	36	static
+D_speaker.c:3721:6:inputmiss	0	static

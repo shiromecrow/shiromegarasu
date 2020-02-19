@@ -1,0 +1,17 @@
+turning.c:10:6:slalomR	48	static
+turning.c:40:6:slalomL	48	static
+turning.c:71:6:turn90R	48	static
+turning.c:103:6:turn90L	48	static
+turning.c:135:6:turn180R	48	static
+turning.c:169:6:turn180L	48	static
+turning.c:201:6:turn45inR	56	static
+turning.c:245:6:turn45inL	56	static
+turning.c:286:6:turn135inR	56	static
+turning.c:328:6:turn135inL	56	static
+turning.c:369:6:turn45outR	24	static
+turning.c:394:6:turn45outL	32	static
+turning.c:419:6:turn135outR	32	static
+turning.c:443:6:turn135outL	32	static
+turning.c:468:6:V90R	32	static
+turning.c:493:6:V90L	32	static
+turning.c:519:6:testturning	16	static

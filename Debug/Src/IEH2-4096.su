@@ -1,0 +1,6 @@
+IEH2-4096.c:12:9:count_encoderR	0	static
+IEH2-4096.c:25:9:count_encoderL	0	static
+IEH2-4096.c:39:6:reset_distance	0	static
+IEH2-4096.c:45:6:encoder_speed	16	static
+IEH2-4096.c:58:6:encoder_distance	8	static
+IEH2-4096.c:66:6:encoder_acceleration	0	static

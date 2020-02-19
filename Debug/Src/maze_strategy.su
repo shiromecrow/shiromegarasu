@@ -1,0 +1,7 @@
+maze_strategy.c:91:6:maze_clean	16	static
+maze_strategy.c:106:6:record_in	16	static
+maze_strategy.c:130:6:record_out	8	static
+maze_strategy.c:155:6:decision_kitiku	20	static
+maze_strategy.c:277:6:compress_kitiku	128	static
+maze_strategy.c:811:6:adati_wayreturn	96	static
+maze_strategy.c:1449:6:most_speed	152	static
