@@ -243,7 +243,7 @@ int main(void) {
 			HAL_Delay(100);
 			//__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,160);
 			//HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
-				record_mode_gyro = 1;
+
 			//	HAL_Delay(2000);
 			//Œó•â1
 			//record_mode_enc = 1;
@@ -292,8 +292,9 @@ int main(void) {
 			//
 			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,150);
 					HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
-					HAL_Delay(1000);
+					HAL_Delay(5000);
 					reset_ICM();
+					record_mode_gyro = 1;
 					r_blue_on;
 					l_blue_on;
 					STBYON;

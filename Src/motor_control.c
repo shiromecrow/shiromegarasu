@@ -171,6 +171,7 @@ void motor_PID(void) {
 			Gyro.sigma_error += Gyro.error;
 			PID_all_R += PID_turn;
 			PID_all_L -= PID_turn;
+
 		} else {
 			PID_turn = Ktp * ((Turn_ideal_speed + pulse_speed) - angle_speed)
 					+ Kti * Gyro.sigma_error //(ideal_distance - (E_distanceR + E_distanceL) / 2)

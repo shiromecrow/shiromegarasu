@@ -225,7 +225,7 @@ SEN_on              0xa               Src\ICM_20602.o
 count_stay2         0x4               Src\ICM_20602.o
 pulse_turnR_mode    0x4               Src\ICM_20602.o
 angle               0x4               Src\ICM_20602.o
-record1             0x9c40            Src\ICM_20602.o
+record1             0xea60            Src\ICM_20602.o
 hdma_adc1           0x60              Src\adc.o
 straight_mode       0x1               Src\ICM_20602.o
 a_speedx            0x4               Src\ICM_20602.o
@@ -1821,7 +1821,7 @@ LOAD c:/users/sf199/desktop/2018_04_03/truestudio for stm32 9.2.0/armtools/bin/.
                 0x10000000                _eccmram = .
                 0x10000000                . = ALIGN (0x4)
 
-.bss            0x200001e0     0xf234
+.bss            0x200001e0    0x14054
                 0x200001e0                _sbss = .
                 0x200001e0                __bss_start__ = _sbss
  *(.bss)
@@ -1868,7 +1868,7 @@ LOAD c:/users/sf199/desktop/2018_04_03/truestudio for stm32 9.2.0/armtools/bin/.
                 0x2000322c                speakermode
                 0x20003230                Zelda_song
                 0x20003540                seria
- COMMON         0x20003a90     0xb670 Src\ICM_20602.o
+ COMMON         0x20003a90    0x10490 Src\ICM_20602.o
                 0x20003a90                SEN
                 0x20003c20                no_wall_timeLslant
                 0x20003c24                Ycheak_result
@@ -1958,142 +1958,142 @@ LOAD c:/users/sf199/desktop/2018_04_03/truestudio for stm32 9.2.0/armtools/bin/.
                 0x20004c28                pulse_turnR_mode
                 0x20004c2c                angle
                 0x20004c30                record1
-                0x2000e870                straight_mode
-                0x2000e874                a_speedx
-                0x2000e878                wall_control
-                0x2000e87c                SEN_distanceR
-                0x2000e880                SEN_distanceL
-                0x2000e884                error_mode
-                0x2000e888                Turn_ideal_distance
-                0x2000e88c                record3
-                0x2000e8dc                shift1
-                0x2000e8de                walk_count_slant
-                0x2000eca0                E_speedR0
-                0x2000eca4                wall_status
-                0x2000eca5                status_change
-                0x2000eca8                no_wall_timeRslant
-                0x2000ecac                count_box
-                0x2000ecfc                count_boxnext
-                0x2000ed4c                speed500
-                0x2000ee8c                y
-                0x2000ee90                count_stay
-                0x2000ee94                SENL_maze
-                0x2000ee98                PID_wall
-                0x2000ee9c                record2
-                0x2000eeec                no_wall_timeL
-                0x2000eef0                slant_start
-                0x2000eef4                E_speedL
-                0x2000eef8                a_speed
-                0x2000eefc                SENF_maze
-                0x2000ef00                record6
-                0x2000efa0                end_speed
-                0x2000efa4                V_batt
-                0x2000efa8                SEND
-                0x2000efbc                Turn_end_speed
-                0x2000efc0                duty_L
-                0x2000efc4                anglex
-                0x2000efc8                g_ADCBuffer
-                0x2000efd4                record_mode_enc
-                0x2000efd8                s_I
-                0x2000efdc                s_D
-                0x2000efe0                one_countR
-                0x2000efe4                wall_south
-                0x2000efe8                E_distanceL
-                0x2000efec                kitikukan
-                0x2000eff0                gf_speed
-                0x2000eff4                Xcoordinate
-                0x2000eff5                boxnext
-                0x2000eff8                acc0
-                0x2000effc                PID_all_L
-                0x2000f000                Avespeed
-                0x2000f004                wall_east
-                0x2000f008                a
-                0x2000f00c                duty_R
-                0x2000f010                Gyro
-                0x2000f020                back_count
-                0x2000f024                pulse_time
-                0x2000f028                q
-                0x2000f02c                Ycoordinate
-                0x2000f030                all_countL
-                0x2000f034                record
-                0x2000f0ac                gf_distance
-                0x2000f0b0                slant_dis
-                0x2000f0b4                column_look
-                0x2000f0d2                slalom_mode
-                0x2000f0d4                E_accelerationR
-                0x2000f0d8                acceleration
-                0x2000f0dc                row
-                0x2000f0fa                shift2
-                0x2000f0fc                No_wall_modeR
-                0x2000f0fd                Xcheak_result
-                0x2000f0fe                left_count
- COMMON         0x2000f100       0xa8 Src\adc.o
-                0x2000f100                hadc1
-                0x2000f148                hdma_adc1
- COMMON         0x2000f1a8       0x3c Src\maze_strategy.o
-                0x2000f1a8                pass_count
-                0x2000f1aa                look_r
-                0x2000f1ac                y_change
-                0x2000f1b0                first_v
-                0x2000f1b4                wall_f
-                0x2000f1b6                wall_r
-                0x2000f1b8                fb_control
-                0x2000f1ba                look_f
-                0x2000f1bc                wall_l
-                0x2000f1be                look_l
-                0x2000f1c0                wall_W
-                0x2000f1c2                rl_control
-                0x2000f1c4                kitiku_distance
-                0x2000f1c8                last_v
-                0x2000f1cc                min
-                0x2000f1ce                kakuninn
-                0x2000f1d0                kitiku
-                0x2000f1d2                wall_N
-                0x2000f1d4                do_move
-                0x2000f1d8                wall_E
-                0x2000f1da                wall_S
-                0x2000f1dc                min_coordinate
-                0x2000f1e0                x_change
- COMMON         0x2000f1e4       0x20 Src\maze_wall.o
-                0x2000f1e4                presence
- COMMON         0x2000f204       0x58 Src\spi.o
-                0x2000f204                hspi1
- COMMON         0x2000f25c        0x4 Src\stm32f4xx_it.o
-                0x2000f25c                g_timCount
- COMMON         0x2000f260      0x168 Src\tim.o
-                0x2000f260                htim8
-                0x2000f29c                htim4
-                0x2000f2d8                htim3
-                0x2000f314                htim6
-                0x2000f350                htim1
-                0x2000f38c                htim2
- COMMON         0x2000f3c8       0x40 Src\usart.o
-                0x2000f3c8                huart4
- COMMON         0x2000f408        0x8 Src\yellow_LED.o
-                0x2000f408                yy4
-                0x2000f409                yy1
-                0x2000f40a                yy6
-                0x2000f40b                yy5
-                0x2000f40c                yy8
-                0x2000f40d                yy2
-                0x2000f40e                yy7
-                0x2000f40f                yy3
- COMMON         0x2000f410        0x4 c:/users/sf199/desktop/2018_04_03/truestudio for stm32 9.2.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu\libc_nano.a(lib_a-reent.o)
-                0x2000f410                errno
-                0x2000f414                . = ALIGN (0x4)
-                0x2000f414                _ebss = .
-                0x2000f414                __bss_end__ = _ebss
+                0x20013690                straight_mode
+                0x20013694                a_speedx
+                0x20013698                wall_control
+                0x2001369c                SEN_distanceR
+                0x200136a0                SEN_distanceL
+                0x200136a4                error_mode
+                0x200136a8                Turn_ideal_distance
+                0x200136ac                record3
+                0x200136fc                shift1
+                0x200136fe                walk_count_slant
+                0x20013ac0                E_speedR0
+                0x20013ac4                wall_status
+                0x20013ac5                status_change
+                0x20013ac8                no_wall_timeRslant
+                0x20013acc                count_box
+                0x20013b1c                count_boxnext
+                0x20013b6c                speed500
+                0x20013cac                y
+                0x20013cb0                count_stay
+                0x20013cb4                SENL_maze
+                0x20013cb8                PID_wall
+                0x20013cbc                record2
+                0x20013d0c                no_wall_timeL
+                0x20013d10                slant_start
+                0x20013d14                E_speedL
+                0x20013d18                a_speed
+                0x20013d1c                SENF_maze
+                0x20013d20                record6
+                0x20013dc0                end_speed
+                0x20013dc4                V_batt
+                0x20013dc8                SEND
+                0x20013ddc                Turn_end_speed
+                0x20013de0                duty_L
+                0x20013de4                anglex
+                0x20013de8                g_ADCBuffer
+                0x20013df4                record_mode_enc
+                0x20013df8                s_I
+                0x20013dfc                s_D
+                0x20013e00                one_countR
+                0x20013e04                wall_south
+                0x20013e08                E_distanceL
+                0x20013e0c                kitikukan
+                0x20013e10                gf_speed
+                0x20013e14                Xcoordinate
+                0x20013e15                boxnext
+                0x20013e18                acc0
+                0x20013e1c                PID_all_L
+                0x20013e20                Avespeed
+                0x20013e24                wall_east
+                0x20013e28                a
+                0x20013e2c                duty_R
+                0x20013e30                Gyro
+                0x20013e40                back_count
+                0x20013e44                pulse_time
+                0x20013e48                q
+                0x20013e4c                Ycoordinate
+                0x20013e50                all_countL
+                0x20013e54                record
+                0x20013ecc                gf_distance
+                0x20013ed0                slant_dis
+                0x20013ed4                column_look
+                0x20013ef2                slalom_mode
+                0x20013ef4                E_accelerationR
+                0x20013ef8                acceleration
+                0x20013efc                row
+                0x20013f1a                shift2
+                0x20013f1c                No_wall_modeR
+                0x20013f1d                Xcheak_result
+                0x20013f1e                left_count
+ COMMON         0x20013f20       0xa8 Src\adc.o
+                0x20013f20                hadc1
+                0x20013f68                hdma_adc1
+ COMMON         0x20013fc8       0x3c Src\maze_strategy.o
+                0x20013fc8                pass_count
+                0x20013fca                look_r
+                0x20013fcc                y_change
+                0x20013fd0                first_v
+                0x20013fd4                wall_f
+                0x20013fd6                wall_r
+                0x20013fd8                fb_control
+                0x20013fda                look_f
+                0x20013fdc                wall_l
+                0x20013fde                look_l
+                0x20013fe0                wall_W
+                0x20013fe2                rl_control
+                0x20013fe4                kitiku_distance
+                0x20013fe8                last_v
+                0x20013fec                min
+                0x20013fee                kakuninn
+                0x20013ff0                kitiku
+                0x20013ff2                wall_N
+                0x20013ff4                do_move
+                0x20013ff8                wall_E
+                0x20013ffa                wall_S
+                0x20013ffc                min_coordinate
+                0x20014000                x_change
+ COMMON         0x20014004       0x20 Src\maze_wall.o
+                0x20014004                presence
+ COMMON         0x20014024       0x58 Src\spi.o
+                0x20014024                hspi1
+ COMMON         0x2001407c        0x4 Src\stm32f4xx_it.o
+                0x2001407c                g_timCount
+ COMMON         0x20014080      0x168 Src\tim.o
+                0x20014080                htim8
+                0x200140bc                htim4
+                0x200140f8                htim3
+                0x20014134                htim6
+                0x20014170                htim1
+                0x200141ac                htim2
+ COMMON         0x200141e8       0x40 Src\usart.o
+                0x200141e8                huart4
+ COMMON         0x20014228        0x8 Src\yellow_LED.o
+                0x20014228                yy4
+                0x20014229                yy1
+                0x2001422a                yy6
+                0x2001422b                yy5
+                0x2001422c                yy8
+                0x2001422d                yy2
+                0x2001422e                yy7
+                0x2001422f                yy3
+ COMMON         0x20014230        0x4 c:/users/sf199/desktop/2018_04_03/truestudio for stm32 9.2.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu\libc_nano.a(lib_a-reent.o)
+                0x20014230                errno
+                0x20014234                . = ALIGN (0x4)
+                0x20014234                _ebss = .
+                0x20014234                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2000f414      0x600
-                0x2000f414                . = ALIGN (0x4)
-                0x2000f414                PROVIDE (end, .)
+                0x20014234      0x600
+                0x20014234                . = ALIGN (0x4)
+                0x20014234                PROVIDE (end, .)
                 [!provide]                PROVIDE (_end, .)
-                0x2000f614                . = (. + _Min_Heap_Size)
- *fill*         0x2000f414      0x200 
-                0x2000fa14                . = (. + _Min_Stack_Size)
- *fill*         0x2000f614      0x400 
-                0x2000fa14                . = ALIGN (0x4)
+                0x20014434                . = (. + _Min_Heap_Size)
+ *fill*         0x20014234      0x200 
+                0x20014834                . = (. + _Min_Stack_Size)
+ *fill*         0x20014434      0x400 
+                0x20014834                . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -2487,7 +2487,7 @@ OUTPUT(shirome.elf elf32-littlearm)
  .debug_aranges
                 0x000004e8       0x28 startup\startup_stm32f405xx.o
 
-.debug_line     0x00000000     0xe041
+.debug_line     0x00000000     0xe038
  .debug_line    0x00000000      0x35a Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o
  .debug_line    0x0000035a      0x676 Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.o
  .debug_line    0x000009d0      0x589 Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.o
@@ -2510,24 +2510,24 @@ OUTPUT(shirome.elf elf32-littlearm)
  .debug_line    0x00007f5a      0x280 Src\dma.o
  .debug_line    0x000081da      0x2bc Src\flash.o
  .debug_line    0x00008496      0x2aa Src\gpio.o
- .debug_line    0x00008740      0x866 Src\main.o
- .debug_line    0x00008fa6      0xced Src\maze_strategy.o
- .debug_line    0x00009c93      0xaf5 Src\maze_wall.o
- .debug_line    0x0000a788      0x3e3 Src\mode_select.o
- .debug_line    0x0000ab6b      0xa22 Src\motor_control.o
- .debug_line    0x0000b58d      0x1d0 Src\parameter.o
- .debug_line    0x0000b75d      0x466 Src\record.o
- .debug_line    0x0000bbc3      0x304 Src\spi.o
- .debug_line    0x0000bec7      0x24e Src\stm32f4xx_hal_msp.o
- .debug_line    0x0000c115      0x49e Src\stm32f4xx_it.o
- .debug_line    0x0000c5b3      0x3bc Src\syscalls.o
- .debug_line    0x0000c96f      0x271 Src\system_stm32f4xx.o
- .debug_line    0x0000cbe0      0x46e Src\tim.o
- .debug_line    0x0000d04e      0x6e8 Src\turning.o
- .debug_line    0x0000d736      0x303 Src\usart.o
- .debug_line    0x0000da39      0x2c4 Src\wait_ms.o
- .debug_line    0x0000dcfd      0x2c5 Src\yellow_LED.o
- .debug_line    0x0000dfc2       0x7f startup\startup_stm32f405xx.o
+ .debug_line    0x00008740      0x85d Src\main.o
+ .debug_line    0x00008f9d      0xced Src\maze_strategy.o
+ .debug_line    0x00009c8a      0xaf5 Src\maze_wall.o
+ .debug_line    0x0000a77f      0x3e3 Src\mode_select.o
+ .debug_line    0x0000ab62      0xa22 Src\motor_control.o
+ .debug_line    0x0000b584      0x1d0 Src\parameter.o
+ .debug_line    0x0000b754      0x466 Src\record.o
+ .debug_line    0x0000bbba      0x304 Src\spi.o
+ .debug_line    0x0000bebe      0x24e Src\stm32f4xx_hal_msp.o
+ .debug_line    0x0000c10c      0x49e Src\stm32f4xx_it.o
+ .debug_line    0x0000c5aa      0x3bc Src\syscalls.o
+ .debug_line    0x0000c966      0x271 Src\system_stm32f4xx.o
+ .debug_line    0x0000cbd7      0x46e Src\tim.o
+ .debug_line    0x0000d045      0x6e8 Src\turning.o
+ .debug_line    0x0000d72d      0x303 Src\usart.o
+ .debug_line    0x0000da30      0x2c4 Src\wait_ms.o
+ .debug_line    0x0000dcf4      0x2c5 Src\yellow_LED.o
+ .debug_line    0x0000dfb9       0x7f startup\startup_stm32f405xx.o
 
 .debug_str      0x00000000     0x617b
  .debug_str     0x00000000      0xe9e Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o

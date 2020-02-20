@@ -19,9 +19,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   7 .ccmram       00000000  10000000  10000000  000301e0  2**0
                   CONTENTS
-  8 .bss          0000f234  200001e0  200001e0  000301e0  2**2
+  8 .bss          00014054  200001e0  200001e0  000301e0  2**2
                   ALLOC
-  9 ._user_heap_stack 00000600  2000f414  2000f414  000301e0  2**0
+  9 ._user_heap_stack 00000600  20014234  20014234  000301e0  2**0
                   ALLOC
  10 .ARM.attributes 00000030  00000000  00000000  000301e0  2**0
                   CONTENTS, READONLY
@@ -33,15 +33,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  14 .debug_aranges 00000510  00000000  00000000  00082f50  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_line   0000e041  00000000  00000000  00083460  2**0
+ 15 .debug_line   0000e038  00000000  00000000  00083460  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_str    0000617b  00000000  00000000  000914a1  2**0
+ 16 .debug_str    0000617b  00000000  00000000  00091498  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .comment      0000007c  00000000  00000000  0009761c  2**0
+ 17 .comment      0000007c  00000000  00000000  00097613  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  00004cd8  00000000  00000000  00097698  2**2
+ 18 .debug_frame  00004cd8  00000000  00000000  00097690  2**2
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_ranges 00000510  00000000  00000000  0009c370  2**3
+ 19 .debug_ranges 00000510  00000000  00000000  0009c368  2**3
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -18310,11 +18310,11 @@ void battcheak(void){
  8007274:	40affe00 	.word	0x40affe00
  8007278:	00000000 	.word	0x00000000
  800727c:	4062c000 	.word	0x4062c000
- 8007280:	2000f100 	.word	0x2000f100
+ 8007280:	20013f20 	.word	0x20013f20
  8007284:	20000254 	.word	0x20000254
  8007288:	40490000 	.word	0x40490000
  800728c:	20000250 	.word	0x20000250
- 8007290:	2000f38c 	.word	0x2000f38c
+ 8007290:	200141ac 	.word	0x200141ac
  8007294:	40020400 	.word	0x40020400
  8007298:	2000322c 	.word	0x2000322c
  800729c:	00000000 	.word	0x00000000
@@ -18430,7 +18430,7 @@ __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4,cycleCount/90);
  8007352:	e7cf      	b.n	80072f4 <MakeMusicScale+0x10>
  8007354:	f3af 8000 	nop.w
  8007358:	43840000 	.word	0x43840000
- 800735c:	2000f38c 	.word	0x2000f38c
+ 800735c:	200141ac 	.word	0x200141ac
  8007360:	45a1cac1 	.word	0x45a1cac1
  8007364:	3ff0f3b6 	.word	0x3ff0f3b6
 
@@ -18557,7 +18557,7 @@ __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4,cycleCount_f);
  8007424:	20003200 	.word	0x20003200
  8007428:	42a00000 	.word	0x42a00000
  800742c:	2000322c 	.word	0x2000322c
- 8007430:	2000f38c 	.word	0x2000f38c
+ 8007430:	200141ac 	.word	0x200141ac
 
 08007434 <interupt_oneSound>:
 void interupt_oneSound(char scale, uint16_t waittime) {
@@ -18684,7 +18684,7 @@ __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4,cycleCount_f);
  80074f0:	45a1cac1 	.word	0x45a1cac1
  80074f4:	3ff0f3b6 	.word	0x3ff0f3b6
  80074f8:	200001fc 	.word	0x200001fc
- 80074fc:	2000f38c 	.word	0x2000f38c
+ 80074fc:	200141ac 	.word	0x200141ac
  8007500:	43840000 	.word	0x43840000
  8007504:	42a00000 	.word	0x42a00000
  8007508:	20003200 	.word	0x20003200
@@ -18763,7 +18763,7 @@ __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4,cycleCount_f);
  800757a:	f835 0c08 	ldrh.w	r0, [r5, #-8]
  800757e:	f7f8 fea7 	bl	80002d0 <HAL_Delay>
  8007582:	e7d1      	b.n	8007528 <playSoundData+0x18>
- 8007584:	2000f38c 	.word	0x2000f38c
+ 8007584:	200141ac 	.word	0x200141ac
  8007588:	42a00000 	.word	0x42a00000
 
 0800758c <inputZelda_nazo>:
@@ -29683,7 +29683,7 @@ uint8_t read_byte(uint8_t reg)
  800c7dc:	bd30      	pop	{r4, r5, pc}
  800c7de:	bf00      	nop
  800c7e0:	40020000 	.word	0x40020000
- 800c7e4:	2000f204 	.word	0x2000f204
+ 800c7e4:	20014024 	.word	0x20014024
 
 0800c7e8 <write_byte>:
 
@@ -29737,7 +29737,7 @@ void write_byte(uint8_t reg, uint8_t val)
  800c82c:	bd70      	pop	{r4, r5, r6, pc}
  800c82e:	bf00      	nop
  800c830:	40020000 	.word	0x40020000
- 800c834:	2000f204 	.word	0x2000f204
+ 800c834:	20014024 	.word	0x20014024
 
 0800c838 <ICM20602_init>:
 
@@ -30068,14 +30068,14 @@ void reset_ICM(void) {
  800c9f2:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
  800c9f6:	bf00      	nop
  800c9f8:	20004c2c 	.word	0x20004c2c
- 800c9fc:	2000e874 	.word	0x2000e874
- 800ca00:	2000eff8 	.word	0x2000eff8
+ 800c9fc:	20013694 	.word	0x20013694
+ 800ca00:	20013e18 	.word	0x20013e18
  800ca04:	447a0000 	.word	0x447a0000
- 800ca08:	2000efc4 	.word	0x2000efc4
- 800ca0c:	2000eff0 	.word	0x2000eff0
- 800ca10:	2000f0ac 	.word	0x2000f0ac
+ 800ca08:	20013de4 	.word	0x20013de4
+ 800ca0c:	20013e10 	.word	0x20013e10
+ 800ca10:	20013ecc 	.word	0x20013ecc
  800ca14:	20004bdc 	.word	0x20004bdc
- 800ca18:	2000eef8 	.word	0x2000eef8
+ 800ca18:	20013d18 	.word	0x20013d18
  800ca1c:	20004bbc 	.word	0x20004bbc
 
 0800ca20 <interrupt_ICM>:
@@ -30127,11 +30127,11 @@ void interrupt_ICM(void) {
  800ca60:	eddf 7a60 	vldr	s15, [pc, #384]	; 800cbe4 <interrupt_ICM+0x1c4>
  800ca64:	ee27 7a27 	vmul.f32	s14, s14, s15
  800ca68:	eec7 7a26 	vdiv.f32	s15, s14, s13
-	angle_speed = (angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
+	angle_speed = ((angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
  800ca6c:	ed93 7a01 	vldr	s14, [r3, #4]
 	angle_speed_ave[0] = (gyro.omega_z - a_speed) * 90 / 96;
  800ca70:	edc3 7a00 	vstr	s15, [r3]
-	angle_speed = (angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
+	angle_speed = ((angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
  800ca74:	ee77 7a87 	vadd.f32	s15, s15, s14
  800ca78:	ed93 7a02 	vldr	s14, [r3, #8]
  800ca7c:	ee77 7a87 	vadd.f32	s15, s15, s14
@@ -30149,12 +30149,12 @@ void interrupt_ICM(void) {
  800caa4:	ee77 7a87 	vadd.f32	s15, s15, s14
  800caa8:	ed93 7a08 	vldr	s14, [r3, #32]
  800caac:	ee77 7a87 	vadd.f32	s15, s15, s14
-			+ angle_speed_ave[9]) / 10;
+			+ angle_speed_ave[9]) / 10);
  800cab0:	ed93 7a09 	vldr	s14, [r3, #36]	; 0x24
  800cab4:	ee77 7a87 	vadd.f32	s15, s15, s14
  800cab8:	eeb2 7a04 	vmov.f32	s14, #36	; 0x41200000  10.0
  800cabc:	ee87 8a87 	vdiv.f32	s16, s15, s14
-	angle_speed = (angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
+	angle_speed = ((angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
  800cac0:	ed84 8a00 	vstr	s16, [r4]
 	angle += 0.001 * angle_speed; //deg
  800cac4:	4c48      	ldr	r4, [pc, #288]	; (800cbe8 <interrupt_ICM+0x1c8>)
@@ -30267,18 +30267,18 @@ void interrupt_ICM(void) {
  800cbcc:	20004200 	.word	0x20004200
  800cbd0:	20004c04 	.word	0x20004c04
  800cbd4:	20004bbc 	.word	0x20004bbc
- 800cbd8:	2000eef8 	.word	0x2000eef8
+ 800cbd8:	20013d18 	.word	0x20013d18
  800cbdc:	42c00000 	.word	0x42c00000
  800cbe0:	20004bdc 	.word	0x20004bdc
  800cbe4:	42b40000 	.word	0x42b40000
  800cbe8:	20004c2c 	.word	0x20004c2c
- 800cbec:	2000e874 	.word	0x2000e874
- 800cbf0:	2000efc4 	.word	0x2000efc4
+ 800cbec:	20013694 	.word	0x20013694
+ 800cbf0:	20013de4 	.word	0x20013de4
  800cbf4:	20004bd4 	.word	0x20004bd4
  800cbf8:	447a0000 	.word	0x447a0000
- 800cbfc:	2000eff0 	.word	0x2000eff0
- 800cc00:	2000eff8 	.word	0x2000eff8
- 800cc04:	2000f0ac 	.word	0x2000f0ac
+ 800cbfc:	20013e10 	.word	0x20013e10
+ 800cc00:	20013e18 	.word	0x20013e18
+ 800cc04:	20013ecc 	.word	0x20013ecc
 
 0800cc08 <count_encoderR>:
 #include "IEH2-4096.h"
@@ -30340,7 +30340,7 @@ void reset_distance(void) {
  800cc34:	6013      	str	r3, [r2, #0]
  800cc36:	4770      	bx	lr
  800cc38:	20004854 	.word	0x20004854
- 800cc3c:	2000f030 	.word	0x2000f030
+ 800cc3c:	20013e50 	.word	0x20013e50
 
 0800cc40 <encoder_speed>:
 
@@ -30455,11 +30455,11 @@ void encoder_speed(void) {
  800cd30:	54411744 	.word	0x54411744
  800cd34:	400921fb 	.word	0x400921fb
  800cd38:	200041f8 	.word	0x200041f8
- 800cd3c:	2000eca0 	.word	0x2000eca0
- 800cd40:	2000eef4 	.word	0x2000eef4
+ 800cd3c:	20013ac0 	.word	0x20013ac0
+ 800cd40:	20013d14 	.word	0x20013d14
  800cd44:	20003c2c 	.word	0x20003c2c
  800cd48:	40010000 	.word	0x40010000
- 800cd4c:	2000efe0 	.word	0x2000efe0
+ 800cd4c:	20013e00 	.word	0x20013e00
  800cd50:	20004adc 	.word	0x20004adc
  800cd54:	408f4000 	.word	0x408f4000
  800cd58:	3fd00000 	.word	0x3fd00000
@@ -30560,16 +30560,16 @@ void encoder_distance(void) {
  800ce38:	54411744 	.word	0x54411744
  800ce3c:	400921fb 	.word	0x400921fb
  800ce40:	20004854 	.word	0x20004854
- 800ce44:	2000efe0 	.word	0x2000efe0
+ 800ce44:	20013e00 	.word	0x20013e00
  800ce48:	20004adc 	.word	0x20004adc
- 800ce4c:	2000f030 	.word	0x2000f030
+ 800ce4c:	20013e50 	.word	0x20013e50
  800ce50:	408f4000 	.word	0x408f4000
  800ce54:	3fd00000 	.word	0x3fd00000
  800ce58:	3f300000 	.word	0x3f300000
  800ce5c:	40440000 	.word	0x40440000
  800ce60:	40260000 	.word	0x40260000
  800ce64:	20004614 	.word	0x20004614
- 800ce68:	2000efe8 	.word	0x2000efe8
+ 800ce68:	20013e08 	.word	0x20013e08
 
 0800ce6c <encoder_acceleration>:
 
@@ -30600,9 +30600,9 @@ void encoder_acceleration(void) {
  800cea6:	bf00      	nop
  800cea8:	200041f8 	.word	0x200041f8
  800ceac:	447a0000 	.word	0x447a0000
- 800ceb0:	2000eca0 	.word	0x2000eca0
- 800ceb4:	2000f0d4 	.word	0x2000f0d4
- 800ceb8:	2000eef4 	.word	0x2000eef4
+ 800ceb0:	20013ac0 	.word	0x20013ac0
+ 800ceb4:	20013ef4 	.word	0x20013ef4
+ 800ceb8:	20013d14 	.word	0x20013d14
  800cebc:	20003c2c 	.word	0x20003c2c
  800cec0:	2000461c 	.word	0x2000461c
  800cec4:	00000000 	.word	0x00000000
@@ -30918,18 +30918,18 @@ void callback_SENSOR(void) {
  800d0d0:	00000000 	.word	0x00000000
  800d0d4:	4062c000 	.word	0x4062c000
  800d0d8:	20004864 	.word	0x20004864
- 800d0dc:	2000f100 	.word	0x2000f100
- 800d0e0:	2000efc8 	.word	0x2000efc8
+ 800d0dc:	20013f20 	.word	0x20013f20
+ 800d0e0:	20013de8 	.word	0x20013de8
  800d0e4:	40020800 	.word	0x40020800
  800d0e8:	20004c18 	.word	0x20004c18
  800d0ec:	40020000 	.word	0x40020000
  800d0f0:	40020400 	.word	0x40020400
  800d0f4:	2000485e 	.word	0x2000485e
  800d0f8:	40490000 	.word	0x40490000
- 800d0fc:	2000efa4 	.word	0x2000efa4
+ 800d0fc:	20013dc4 	.word	0x20013dc4
  800d100:	200041e8 	.word	0x200041e8
  800d104:	20003adc 	.word	0x20003adc
- 800d108:	2000efa8 	.word	0x2000efa8
+ 800d108:	20013dc8 	.word	0x20013dc8
  800d10c:	20004840 	.word	0x20004840
 
 0800d110 <sensor_line>:
@@ -31258,7 +31258,7 @@ void MX_ADC1_Init(void)
 }
  800d2f8:	b004      	add	sp, #16
  800d2fa:	bd10      	pop	{r4, pc}
- 800d2fc:	2000f100 	.word	0x2000f100
+ 800d2fc:	20013f20 	.word	0x20013f20
  800d300:	40012000 	.word	0x40012000
  800d304:	0f000001 	.word	0x0f000001
 
@@ -31425,7 +31425,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
  800d3d4:	40012000 	.word	0x40012000
  800d3d8:	40020800 	.word	0x40020800
  800d3dc:	40020000 	.word	0x40020000
- 800d3e0:	2000f148 	.word	0x2000f148
+ 800d3e0:	20013f68 	.word	0x20013f68
  800d3e4:	40026410 	.word	0x40026410
 
 0800d3e8 <HAL_ADC_MspDeInit>:
@@ -32019,13 +32019,13 @@ void maze_clean(void) {
  800d6ac:	bd70      	pop	{r4, r5, r6, pc}
  800d6ae:	bf00      	nop
  800d6b0:	20004094 	.word	0x20004094
- 800d6b4:	2000ee8c 	.word	0x2000ee8c
- 800d6b8:	2000f0dc 	.word	0x2000f0dc
+ 800d6b4:	20013cac 	.word	0x20013cac
+ 800d6b8:	20013efc 	.word	0x20013efc
  800d6bc:	20004ba8 	.word	0x20004ba8
  800d6c0:	20004866 	.word	0x20004866
  800d6c4:	20004ae0 	.word	0x20004ae0
- 800d6c8:	2000f032 	.word	0x2000f032
- 800d6cc:	2000f0b4 	.word	0x2000f0b4
+ 800d6c8:	20013e52 	.word	0x20013e52
+ 800d6cc:	20013ed4 	.word	0x20013ed4
  800d6d0:	20000204 	.word	0x20000204
 
 0800d6d4 <record_in>:
@@ -32115,18 +32115,18 @@ void record_in(void) {
  800d748:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
 	writeFlash(start_address + 3 * sizeof(record.row),
  800d74c:	f7ff be9e 	b.w	800d48c <writeFlash>
- 800d750:	2000f032 	.word	0x2000f032
- 800d754:	2000f0dc 	.word	0x2000f0dc
+ 800d750:	20013e52 	.word	0x20013e52
+ 800d754:	20013efc 	.word	0x20013efc
  800d758:	20004866 	.word	0x20004866
- 800d75c:	2000f06e 	.word	0x2000f06e
+ 800d75c:	20013e8e 	.word	0x20013e8e
  800d760:	20004ae0 	.word	0x20004ae0
- 800d764:	2000f0b4 	.word	0x2000f0b4
+ 800d764:	20013ed4 	.word	0x20013ed4
  800d768:	20000204 	.word	0x20000204
- 800d76c:	2000f034 	.word	0x2000f034
+ 800d76c:	20013e54 	.word	0x20013e54
  800d770:	0801cb44 	.word	0x0801cb44
- 800d774:	2000f052 	.word	0x2000f052
- 800d778:	2000f070 	.word	0x2000f070
- 800d77c:	2000f08e 	.word	0x2000f08e
+ 800d774:	20013e72 	.word	0x20013e72
+ 800d778:	20013e90 	.word	0x20013e90
+ 800d77c:	20013eae 	.word	0x20013eae
 
 0800d780 <record_out>:
 void record_out(void) {
@@ -32209,16 +32209,16 @@ void record_out(void) {
  800d7f0:	bd10      	pop	{r4, pc}
  800d7f2:	bf00      	nop
  800d7f4:	0801cb44 	.word	0x0801cb44
- 800d7f8:	2000f034 	.word	0x2000f034
- 800d7fc:	2000f052 	.word	0x2000f052
- 800d800:	2000f070 	.word	0x2000f070
- 800d804:	2000f08e 	.word	0x2000f08e
- 800d808:	2000f0dc 	.word	0x2000f0dc
- 800d80c:	2000f032 	.word	0x2000f032
+ 800d7f8:	20013e54 	.word	0x20013e54
+ 800d7fc:	20013e72 	.word	0x20013e72
+ 800d800:	20013e90 	.word	0x20013e90
+ 800d804:	20013eae 	.word	0x20013eae
+ 800d808:	20013efc 	.word	0x20013efc
+ 800d80c:	20013e52 	.word	0x20013e52
  800d810:	20004866 	.word	0x20004866
- 800d814:	2000f06e 	.word	0x2000f06e
+ 800d814:	20013e8e 	.word	0x20013e8e
  800d818:	20004ae0 	.word	0x20004ae0
- 800d81c:	2000f0b4 	.word	0x2000f0b4
+ 800d81c:	20013ed4 	.word	0x20013ed4
  800d820:	20000204 	.word	0x20000204
 
 0800d824 <decision_kitiku>:
@@ -32522,20 +32522,20 @@ void decision_kitiku(void) {
  800d9c8:	e786      	b.n	800d8d8 <decision_kitiku+0xb4>
  800d9ca:	bf00      	nop
  800d9cc:	20004ba8 	.word	0x20004ba8
- 800d9d0:	2000ee8c 	.word	0x2000ee8c
+ 800d9d0:	20013cac 	.word	0x20013cac
  800d9d4:	20004094 	.word	0x20004094
- 800d9d8:	2000f0b4 	.word	0x2000f0b4
+ 800d9d8:	20013ed4 	.word	0x20013ed4
  800d9dc:	20000008 	.word	0x20000008
- 800d9e0:	2000f1ba 	.word	0x2000f1ba
+ 800d9e0:	20013fda 	.word	0x20013fda
  800d9e4:	20004ae0 	.word	0x20004ae0
- 800d9e8:	2000eefc 	.word	0x2000eefc
+ 800d9e8:	20013d1c 	.word	0x20013d1c
  800d9ec:	20004862 	.word	0x20004862
  800d9f0:	20004bd8 	.word	0x20004bd8
  800d9f4:	2000460c 	.word	0x2000460c
- 800d9f8:	2000ee94 	.word	0x2000ee94
- 800d9fc:	2000f0fe 	.word	0x2000f0fe
- 800da00:	2000efec 	.word	0x2000efec
- 800da04:	2000f020 	.word	0x2000f020
+ 800d9f8:	20013cb4 	.word	0x20013cb4
+ 800d9fc:	20013f1e 	.word	0x20013f1e
+ 800da00:	20013e0c 	.word	0x20013e0c
+ 800da04:	20013e40 	.word	0x20013e40
 
 0800da08 <compress_kitiku>:
 //		kitikukan = 1;
@@ -32955,23 +32955,23 @@ void compress_kitiku(void) {
  800dc7a:	9100      	str	r1, [sp, #0]
  800dc7c:	e71c      	b.n	800dab8 <compress_kitiku+0xb0>
  800dc7e:	bf00      	nop
- 800dc80:	2000f1b6 	.word	0x2000f1b6
- 800dc84:	2000f1c4 	.word	0x2000f1c4
- 800dc88:	2000f1b4 	.word	0x2000f1b4
+ 800dc80:	20013fd6 	.word	0x20013fd6
+ 800dc84:	20013fe4 	.word	0x20013fe4
+ 800dc88:	20013fd4 	.word	0x20013fd4
  800dc8c:	20004094 	.word	0x20004094
- 800dc90:	2000f1bc 	.word	0x2000f1bc
- 800dc94:	2000f1d0 	.word	0x2000f1d0
+ 800dc90:	20013fdc 	.word	0x20013fdc
+ 800dc94:	20013ff0 	.word	0x20013ff0
  800dc98:	20004862 	.word	0x20004862
- 800dc9c:	2000f1ba 	.word	0x2000f1ba
+ 800dc9c:	20013fda 	.word	0x20013fda
  800dca0:	2000460c 	.word	0x2000460c
- 800dca4:	2000f1be 	.word	0x2000f1be
- 800dca8:	2000f0fe 	.word	0x2000f0fe
- 800dcac:	2000f1aa 	.word	0x2000f1aa
- 800dcb0:	2000f020 	.word	0x2000f020
+ 800dca4:	20013fde 	.word	0x20013fde
+ 800dca8:	20013f1e 	.word	0x20013f1e
+ 800dcac:	20013fca 	.word	0x20013fca
+ 800dcb0:	20013e40 	.word	0x20013e40
  800dcb4:	20004ba8 	.word	0x20004ba8
- 800dcb8:	2000ee8c 	.word	0x2000ee8c
+ 800dcb8:	20013cac 	.word	0x20013cac
  800dcbc:	20004ae0 	.word	0x20004ae0
- 800dcc0:	2000f0b4 	.word	0x2000f0b4
+ 800dcc0:	20013ed4 	.word	0x20013ed4
 				if (y == 14) {
  800dcc4:	2b0e      	cmp	r3, #14
  800dcc6:	d059      	beq.n	800dd7c <compress_kitiku+0x374>
@@ -33407,10 +33407,10 @@ void compress_kitiku(void) {
  800df72:	9905      	ldr	r1, [sp, #20]
  800df74:	9114      	str	r1, [sp, #80]	; 0x50
  800df76:	e01a      	b.n	800dfae <compress_kitiku+0x5a6>
- 800df78:	2000f0b4 	.word	0x2000f0b4
+ 800df78:	20013ed4 	.word	0x20013ed4
  800df7c:	20004ae0 	.word	0x20004ae0
  800df80:	20004866 	.word	0x20004866
- 800df84:	2000f0dc 	.word	0x2000f0dc
+ 800df84:	20013efc 	.word	0x20013efc
  800df88:	20004630 	.word	0x20004630
 				left_count = 255;
  800df8c:	f04f 0bff 	mov.w	fp, #255	; 0xff
@@ -33715,24 +33715,24 @@ void compress_kitiku(void) {
  800e1f0:	21ff      	movs	r1, #255	; 0xff
  800e1f2:	e7e6      	b.n	800e1c2 <compress_kitiku+0x7ba>
  800e1f4:	20004630 	.word	0x20004630
- 800e1f8:	2000f1ba 	.word	0x2000f1ba
+ 800e1f8:	20013fda 	.word	0x20013fda
  800e1fc:	20000008 	.word	0x20000008
- 800e200:	2000f1be 	.word	0x2000f1be
- 800e204:	2000f1aa 	.word	0x2000f1aa
- 800e208:	2000f1d2 	.word	0x2000f1d2
- 800e20c:	2000f1da 	.word	0x2000f1da
- 800e210:	2000f1d8 	.word	0x2000f1d8
- 800e214:	2000f1c0 	.word	0x2000f1c0
- 800e218:	2000f1b4 	.word	0x2000f1b4
- 800e21c:	2000f1bc 	.word	0x2000f1bc
- 800e220:	2000f1b6 	.word	0x2000f1b6
+ 800e200:	20013fde 	.word	0x20013fde
+ 800e204:	20013fca 	.word	0x20013fca
+ 800e208:	20013ff2 	.word	0x20013ff2
+ 800e20c:	20013ffa 	.word	0x20013ffa
+ 800e210:	20013ff8 	.word	0x20013ff8
+ 800e214:	20013fe0 	.word	0x20013fe0
+ 800e218:	20013fd4 	.word	0x20013fd4
+ 800e21c:	20013fdc 	.word	0x20013fdc
+ 800e220:	20013fd6 	.word	0x20013fd6
  800e224:	20004862 	.word	0x20004862
- 800e228:	2000f0fe 	.word	0x2000f0fe
+ 800e228:	20013f1e 	.word	0x20013f1e
  800e22c:	2000460c 	.word	0x2000460c
- 800e230:	2000f020 	.word	0x2000f020
- 800e234:	2000f1c4 	.word	0x2000f1c4
+ 800e230:	20013e40 	.word	0x20013e40
+ 800e234:	20013fe4 	.word	0x20013fe4
  800e238:	20004ba8 	.word	0x20004ba8
- 800e23c:	2000ee8c 	.word	0x2000ee8c
+ 800e23c:	20013cac 	.word	0x20013cac
  800e240:	20004094 	.word	0x20004094
 		if (wall_f == 0 && wall_l >= 1 && wall_r >= 1) {
  800e244:	9914      	ldr	r1, [sp, #80]	; 0x50
@@ -34023,25 +34023,25 @@ void compress_kitiku(void) {
  800e47c:	3201      	adds	r2, #1
  800e47e:	e7f8      	b.n	800e472 <compress_kitiku+0xa6a>
  800e480:	20004ba8 	.word	0x20004ba8
- 800e484:	2000ee8c 	.word	0x2000ee8c
+ 800e484:	20013cac 	.word	0x20013cac
  800e488:	20004094 	.word	0x20004094
- 800e48c:	2000f1ba 	.word	0x2000f1ba
+ 800e48c:	20013fda 	.word	0x20013fda
  800e490:	20000008 	.word	0x20000008
- 800e494:	2000f1be 	.word	0x2000f1be
- 800e498:	2000f1aa 	.word	0x2000f1aa
- 800e49c:	2000f1d2 	.word	0x2000f1d2
- 800e4a0:	2000f1da 	.word	0x2000f1da
- 800e4a4:	2000f1d8 	.word	0x2000f1d8
- 800e4a8:	2000f1c0 	.word	0x2000f1c0
- 800e4ac:	2000f1b4 	.word	0x2000f1b4
- 800e4b0:	2000f1bc 	.word	0x2000f1bc
- 800e4b4:	2000f1b6 	.word	0x2000f1b6
+ 800e494:	20013fde 	.word	0x20013fde
+ 800e498:	20013fca 	.word	0x20013fca
+ 800e49c:	20013ff2 	.word	0x20013ff2
+ 800e4a0:	20013ffa 	.word	0x20013ffa
+ 800e4a4:	20013ff8 	.word	0x20013ff8
+ 800e4a8:	20013fe0 	.word	0x20013fe0
+ 800e4ac:	20013fd4 	.word	0x20013fd4
+ 800e4b0:	20013fdc 	.word	0x20013fdc
+ 800e4b4:	20013fd6 	.word	0x20013fd6
  800e4b8:	20004862 	.word	0x20004862
- 800e4bc:	2000f0fe 	.word	0x2000f0fe
+ 800e4bc:	20013f1e 	.word	0x20013f1e
  800e4c0:	2000460c 	.word	0x2000460c
- 800e4c4:	2000f020 	.word	0x2000f020
- 800e4c8:	2000f1c4 	.word	0x2000f1c4
- 800e4cc:	2000f1d0 	.word	0x2000f1d0
+ 800e4c4:	20013e40 	.word	0x20013e40
+ 800e4c8:	20013fe4 	.word	0x20013fe4
+ 800e4cc:	20013ff0 	.word	0x20013ff0
 				look_r = column_look[y] & shift5;
  800e4d0:	4952      	ldr	r1, [pc, #328]	; (800e61c <compress_kitiku+0xc14>)
  800e4d2:	f831 1013 	ldrh.w	r1, [r1, r3, lsl #1]
@@ -34180,20 +34180,20 @@ void compress_kitiku(void) {
  800e616:	2001      	movs	r0, #1
  800e618:	e45f      	b.n	800deda <compress_kitiku+0x4d2>
  800e61a:	bf00      	nop
- 800e61c:	2000f0b4 	.word	0x2000f0b4
- 800e620:	2000f1ba 	.word	0x2000f1ba
+ 800e61c:	20013ed4 	.word	0x20013ed4
+ 800e620:	20013fda 	.word	0x20013fda
  800e624:	20000008 	.word	0x20000008
- 800e628:	2000f1be 	.word	0x2000f1be
- 800e62c:	2000f1aa 	.word	0x2000f1aa
- 800e630:	2000f1d2 	.word	0x2000f1d2
- 800e634:	2000f1da 	.word	0x2000f1da
- 800e638:	2000f1d8 	.word	0x2000f1d8
- 800e63c:	2000f1c0 	.word	0x2000f1c0
- 800e640:	2000f1b4 	.word	0x2000f1b4
- 800e644:	2000f1bc 	.word	0x2000f1bc
- 800e648:	2000f1b6 	.word	0x2000f1b6
+ 800e628:	20013fde 	.word	0x20013fde
+ 800e62c:	20013fca 	.word	0x20013fca
+ 800e630:	20013ff2 	.word	0x20013ff2
+ 800e634:	20013ffa 	.word	0x20013ffa
+ 800e638:	20013ff8 	.word	0x20013ff8
+ 800e63c:	20013fe0 	.word	0x20013fe0
+ 800e640:	20013fd4 	.word	0x20013fd4
+ 800e644:	20013fdc 	.word	0x20013fdc
+ 800e648:	20013fd6 	.word	0x20013fd6
  800e64c:	20004ba8 	.word	0x20004ba8
- 800e650:	2000ee8c 	.word	0x2000ee8c
+ 800e650:	20013cac 	.word	0x20013cac
  800e654:	20004094 	.word	0x20004094
 
 0800e658 <adati_wayreturn>:
@@ -34565,12 +34565,12 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800e8da:	d0ec      	beq.n	800e8b6 <adati_wayreturn+0x25e>
  800e8dc:	e7e3      	b.n	800e8a6 <adati_wayreturn+0x24e>
  800e8de:	bf00      	nop
- 800e8e0:	2000f000 	.word	0x2000f000
+ 800e8e0:	20013e20 	.word	0x20013e20
  800e8e4:	442f0000 	.word	0x442f0000
  800e8e8:	20004840 	.word	0x20004840
  800e8ec:	40020400 	.word	0x40020400
  800e8f0:	20004094 	.word	0x20004094
- 800e8f4:	2000ee8c 	.word	0x2000ee8c
+ 800e8f4:	20013cac 	.word	0x20013cac
  800e8f8:	20004ba8 	.word	0x20004ba8
  800e8fc:	20004bb0 	.word	0x20004bb0
  800e900:	00000000 	.word	0x00000000
@@ -34578,14 +34578,14 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800e908:	20004630 	.word	0x20004630
  800e90c:	20004862 	.word	0x20004862
  800e910:	2000460c 	.word	0x2000460c
- 800e914:	2000f0fe 	.word	0x2000f0fe
+ 800e914:	20013f1e 	.word	0x20013f1e
  800e918:	43200000 	.word	0x43200000
  800e91c:	20004830 	.word	0x20004830
- 800e920:	2000ee94 	.word	0x2000ee94
- 800e924:	2000eefc 	.word	0x2000eefc
+ 800e920:	20013cb4 	.word	0x20013cb4
+ 800e924:	20013d1c 	.word	0x20013d1c
  800e928:	20004bd8 	.word	0x20004bd8
- 800e92c:	2000f1d4 	.word	0x2000f1d4
- 800e930:	2000f020 	.word	0x2000f020
+ 800e92c:	20013ff4 	.word	0x20013ff4
+ 800e930:	20013e40 	.word	0x20013e40
 				|| (x == goal_x + 1 && y == goal_y + 1)) {
  800e934:	2b08      	cmp	r3, #8
  800e936:	d091      	beq.n	800e85c <adati_wayreturn+0x204>
@@ -34928,12 +34928,12 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800eb8e:	3b01      	subs	r3, #1
  800eb90:	e7f7      	b.n	800eb82 <adati_wayreturn+0x52a>
  800eb92:	bf00      	nop
- 800eb94:	2000efec 	.word	0x2000efec
+ 800eb94:	20013e0c 	.word	0x20013e0c
  800eb98:	20004862 	.word	0x20004862
  800eb9c:	2000460c 	.word	0x2000460c
- 800eba0:	2000f0fe 	.word	0x2000f0fe
+ 800eba0:	20013f1e 	.word	0x20013f1e
  800eba4:	43200000 	.word	0x43200000
- 800eba8:	2000ed4c 	.word	0x2000ed4c
+ 800eba8:	20013b6c 	.word	0x20013b6c
  800ebac:	00000000 	.word	0x00000000
  800ebb0:	428c0000 	.word	0x428c0000
  800ebb4:	43340000 	.word	0x43340000
@@ -34941,7 +34941,7 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800ebbc:	c3480000 	.word	0xc3480000
  800ebc0:	c2b40000 	.word	0xc2b40000
  800ebc4:	20004abc 	.word	0x20004abc
- 800ebc8:	2000f010 	.word	0x2000f010
+ 800ebc8:	20013e30 	.word	0x20013e30
  800ebcc:	20004c2c 	.word	0x20004c2c
  800ebd0:	43018000 	.word	0x43018000
 					if (y == 15) {
@@ -35333,15 +35333,15 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800eee0:	c3480000 	.word	0xc3480000
  800eee4:	c2b40000 	.word	0xc2b40000
  800eee8:	20004abc 	.word	0x20004abc
- 800eeec:	2000f010 	.word	0x2000f010
+ 800eeec:	20013e30 	.word	0x20013e30
  800eef0:	20004c2c 	.word	0x20004c2c
  800eef4:	43018000 	.word	0x43018000
- 800eef8:	2000f0fe 	.word	0x2000f0fe
+ 800eef8:	20013f1e 	.word	0x20013f1e
  800eefc:	c3340000 	.word	0xc3340000
  800ef00:	2000483c 	.word	0x2000483c
  800ef04:	c24e0000 	.word	0xc24e0000
- 800ef08:	2000f1d4 	.word	0x2000f1d4
- 800ef0c:	2000f020 	.word	0x2000f020
+ 800ef08:	20013ff4 	.word	0x20013ff4
+ 800ef0c:	20013e40 	.word	0x20013e40
 			if (y == 15) {
  800ef10:	6821      	ldr	r1, [r4, #0]
  800ef12:	48a7      	ldr	r0, [pc, #668]	; (800f1b0 <adati_wayreturn+0xb58>)
@@ -35720,10 +35720,10 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800f1b0:	20004630 	.word	0x20004630
  800f1b4:	20004862 	.word	0x20004862
  800f1b8:	2000460c 	.word	0x2000460c
- 800f1bc:	2000f0fe 	.word	0x2000f0fe
- 800f1c0:	2000efec 	.word	0x2000efec
+ 800f1bc:	20013f1e 	.word	0x20013f1e
+ 800f1c0:	20013e0c 	.word	0x20013e0c
  800f1c4:	43200000 	.word	0x43200000
- 800f1c8:	2000ed4c 	.word	0x2000ed4c
+ 800f1c8:	20013b6c 	.word	0x20013b6c
  800f1cc:	00000000 	.word	0x00000000
  800f1d0:	428c0000 	.word	0x428c0000
  800f1d4:	43340000 	.word	0x43340000
@@ -35731,7 +35731,7 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800f1dc:	c3480000 	.word	0xc3480000
  800f1e0:	c2b40000 	.word	0xc2b40000
  800f1e4:	20004abc 	.word	0x20004abc
- 800f1e8:	2000f010 	.word	0x2000f010
+ 800f1e8:	20013e30 	.word	0x20013e30
  800f1ec:	20004c2c 	.word	0x20004c2c
  800f1f0:	43018000 	.word	0x43018000
 			if (y == 0) {
@@ -35974,8 +35974,8 @@ void adati_wayreturn(float inspeed, float inanglespeed, float inacc,
  800f3c4:	428c0000 	.word	0x428c0000
  800f3c8:	43340000 	.word	0x43340000
  800f3cc:	40020400 	.word	0x40020400
- 800f3d0:	2000e884 	.word	0x2000e884
- 800f3d4:	2000f0fe 	.word	0x2000f0fe
+ 800f3d0:	200136a4 	.word	0x200136a4
+ 800f3d4:	20013f1e 	.word	0x20013f1e
  800f3d8:	c3340000 	.word	0xc3340000
  800f3dc:	2000483c 	.word	0x2000483c
  800f3e0:	c3480000 	.word	0xc3480000
@@ -36254,28 +36254,28 @@ void most_speed(float inspeed, float inacc, int stmass, char fun_mode,
  800f590:	3801      	subs	r0, #1
  800f592:	e7f8      	b.n	800f586 <most_speed+0x19e>
  800f594:	20004094 	.word	0x20004094
- 800f598:	2000ee8c 	.word	0x2000ee8c
+ 800f598:	20013cac 	.word	0x20013cac
  800f59c:	20004ba8 	.word	0x20004ba8
  800f5a0:	20004210 	.word	0x20004210
- 800f5a4:	2000f032 	.word	0x2000f032
- 800f5a8:	2000f0dc 	.word	0x2000f0dc
+ 800f5a4:	20013e52 	.word	0x20013e52
+ 800f5a8:	20013efc 	.word	0x20013efc
  800f5ac:	20004866 	.word	0x20004866
- 800f5b0:	2000f0b4 	.word	0x2000f0b4
- 800f5b4:	2000f06e 	.word	0x2000f06e
+ 800f5b0:	20013ed4 	.word	0x20013ed4
+ 800f5b4:	20013e8e 	.word	0x20013e8e
  800f5b8:	20000204 	.word	0x20000204
- 800f5bc:	2000f1a8 	.word	0x2000f1a8
+ 800f5bc:	20013fc8 	.word	0x20013fc8
  800f5c0:	20000008 	.word	0x20000008
  800f5c4:	20004862 	.word	0x20004862
- 800f5c8:	2000f0fe 	.word	0x2000f0fe
+ 800f5c8:	20013f1e 	.word	0x20013f1e
  800f5cc:	2000460c 	.word	0x2000460c
- 800f5d0:	2000f1b4 	.word	0x2000f1b4
- 800f5d4:	2000f1bc 	.word	0x2000f1bc
- 800f5d8:	2000f1da 	.word	0x2000f1da
- 800f5dc:	2000f020 	.word	0x2000f020
- 800f5e0:	2000f1d2 	.word	0x2000f1d2
- 800f5e4:	2000f1c0 	.word	0x2000f1c0
- 800f5e8:	2000f1d8 	.word	0x2000f1d8
- 800f5ec:	2000f1b6 	.word	0x2000f1b6
+ 800f5d0:	20013fd4 	.word	0x20013fd4
+ 800f5d4:	20013fdc 	.word	0x20013fdc
+ 800f5d8:	20013ffa 	.word	0x20013ffa
+ 800f5dc:	20013e40 	.word	0x20013e40
+ 800f5e0:	20013ff2 	.word	0x20013ff2
+ 800f5e4:	20013fe0 	.word	0x20013fe0
+ 800f5e8:	20013ff8 	.word	0x20013ff8
+ 800f5ec:	20013fd6 	.word	0x20013fd6
  800f5f0:	20004ae0 	.word	0x20004ae0
  800f5f4:	20004630 	.word	0x20004630
 		if (x == goal_x + 1 && y == goal_y + 1) {
@@ -36644,25 +36644,25 @@ void most_speed(float inspeed, float inacc, int stmass, char fun_mode,
 			wall_W = 1;
  800f89c:	2601      	movs	r6, #1
  800f89e:	e7eb      	b.n	800f878 <most_speed+0x490>
- 800f8a0:	2000f1a8 	.word	0x2000f1a8
- 800f8a4:	2000ee8c 	.word	0x2000ee8c
+ 800f8a0:	20013fc8 	.word	0x20013fc8
+ 800f8a4:	20013cac 	.word	0x20013cac
  800f8a8:	20004094 	.word	0x20004094
- 800f8ac:	2000f0fe 	.word	0x2000f0fe
+ 800f8ac:	20013f1e 	.word	0x20013f1e
  800f8b0:	20004862 	.word	0x20004862
  800f8b4:	2000460c 	.word	0x2000460c
- 800f8b8:	2000f1b6 	.word	0x2000f1b6
- 800f8bc:	2000f1bc 	.word	0x2000f1bc
- 800f8c0:	2000f1b4 	.word	0x2000f1b4
- 800f8c4:	2000f020 	.word	0x2000f020
- 800f8c8:	2000f1c0 	.word	0x2000f1c0
- 800f8cc:	2000f1da 	.word	0x2000f1da
- 800f8d0:	2000f1d2 	.word	0x2000f1d2
- 800f8d4:	2000f1d8 	.word	0x2000f1d8
+ 800f8b8:	20013fd6 	.word	0x20013fd6
+ 800f8bc:	20013fdc 	.word	0x20013fdc
+ 800f8c0:	20013fd4 	.word	0x20013fd4
+ 800f8c4:	20013e40 	.word	0x20013e40
+ 800f8c8:	20013fe0 	.word	0x20013fe0
+ 800f8cc:	20013ffa 	.word	0x20013ffa
+ 800f8d0:	20013ff2 	.word	0x20013ff2
+ 800f8d4:	20013ff8 	.word	0x20013ff8
  800f8d8:	20000008 	.word	0x20000008
  800f8dc:	20004210 	.word	0x20004210
  800f8e0:	20004ba8 	.word	0x20004ba8
  800f8e4:	20004866 	.word	0x20004866
- 800f8e8:	2000f0dc 	.word	0x2000f0dc
+ 800f8e8:	20013efc 	.word	0x20013efc
 			if (y == 15) {
  800f8ec:	290f      	cmp	r1, #15
  800f8ee:	d007      	beq.n	800f900 <most_speed+0x518>
@@ -37626,18 +37626,18 @@ void most_speed(float inspeed, float inacc, int stmass, char fun_mode,
  801004c:	c3480000 	.word	0xc3480000
  8010050:	c25c0000 	.word	0xc25c0000
  8010054:	20004abc 	.word	0x20004abc
- 8010058:	2000f010 	.word	0x2000f010
+ 8010058:	20013e30 	.word	0x20013e30
  801005c:	20004bb0 	.word	0x20004bb0
- 8010060:	2000f29c 	.word	0x2000f29c
+ 8010060:	200140bc 	.word	0x200140bc
  8010064:	20004830 	.word	0x20004830
  8010068:	200041e4 	.word	0x200041e4
  801006c:	44af0000 	.word	0x44af0000
- 8010070:	2000f000 	.word	0x2000f000
- 8010074:	2000e878 	.word	0x2000e878
+ 8010070:	20013e20 	.word	0x20013e20
+ 8010074:	20013698 	.word	0x20013698
  8010078:	44480000 	.word	0x44480000
  801007c:	46cb2000 	.word	0x46cb2000
  8010080:	421e0000 	.word	0x421e0000
- 8010084:	2000f1b0 	.word	0x2000f1b0
+ 8010084:	20013fd0 	.word	0x20013fd0
 		if (pass[pass_count] == -16) { //V90R
  8010088:	f898 3000 	ldrb.w	r3, [r8]
  801008c:	f854 3023 	ldr.w	r3, [r4, r3, lsl #2]
@@ -38062,21 +38062,21 @@ void most_speed(float inspeed, float inacc, int stmass, char fun_mode,
  80103cc:	f3af 8000 	nop.w
  80103d0:	d70a3d70 	.word	0xd70a3d70
  80103d4:	405fd0a3 	.word	0x405fd0a3
- 80103d8:	2000f1c8 	.word	0x2000f1c8
+ 80103d8:	20013fe8 	.word	0x20013fe8
  80103dc:	44480000 	.word	0x44480000
- 80103e0:	2000ee8c 	.word	0x2000ee8c
+ 80103e0:	20013cac 	.word	0x20013cac
  80103e4:	200041f8 	.word	0x200041f8
  80103e8:	00000000 	.word	0x00000000
- 80103ec:	2000eef4 	.word	0x2000eef4
+ 80103ec:	20013d14 	.word	0x20013d14
  80103f0:	43340000 	.word	0x43340000
- 80103f4:	2000f29c 	.word	0x2000f29c
+ 80103f4:	200140bc 	.word	0x200140bc
  80103f8:	459c4000 	.word	0x459c4000
  80103fc:	43c80000 	.word	0x43c80000
  8010400:	40020400 	.word	0x40020400
- 8010404:	2000f0dc 	.word	0x2000f0dc
+ 8010404:	20013efc 	.word	0x20013efc
  8010408:	20004866 	.word	0x20004866
  801040c:	20004ae0 	.word	0x20004ae0
- 8010410:	2000f0b4 	.word	0x2000f0b4
+ 8010410:	20013ed4 	.word	0x20013ed4
  8010414:	421e0000 	.word	0x421e0000
  8010418:	20004210 	.word	0x20004210
  801041c:	20004094 	.word	0x20004094
@@ -38311,17 +38311,17 @@ void maze_clear(void) { //初期化
  8010566:	9200      	str	r2, [sp, #0]
  8010568:	e798      	b.n	801049c <maze_clear+0x7c>
  801056a:	bf00      	nop
- 801056c:	2000f0dc 	.word	0x2000f0dc
+ 801056c:	20013efc 	.word	0x20013efc
  8010570:	20004866 	.word	0x20004866
  8010574:	20004ae0 	.word	0x20004ae0
- 8010578:	2000f0b4 	.word	0x2000f0b4
+ 8010578:	20013ed4 	.word	0x20013ed4
  801057c:	20004630 	.word	0x20004630
  8010580:	20000210 	.word	0x20000210
  8010584:	2000000a 	.word	0x2000000a
- 8010588:	2000f0fd 	.word	0x2000f0fd
+ 8010588:	20013f1d 	.word	0x20013f1d
  801058c:	20003c24 	.word	0x20003c24
- 8010590:	2000eff4 	.word	0x2000eff4
- 8010594:	2000f02c 	.word	0x2000f02c
+ 8010590:	20013e14 	.word	0x20013e14
+ 8010594:	20013e4c 	.word	0x20013e4c
  8010598:	20004860 	.word	0x20004860
  801059c:	200041f4 	.word	0x200041f4
 
@@ -38723,21 +38723,21 @@ void maze_maker(int direction, int front_SEN, int left_SEN, int right_SEN,
 }
  80107fe:	b00f      	add	sp, #60	; 0x3c
  8010800:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
- 8010804:	2000f0b4 	.word	0x2000f0b4
+ 8010804:	20013ed4 	.word	0x20013ed4
  8010808:	20004866 	.word	0x20004866
- 801080c:	2000e8dc 	.word	0x2000e8dc
+ 801080c:	200136fc 	.word	0x200136fc
  8010810:	20004ae0 	.word	0x20004ae0
- 8010814:	2000f0dc 	.word	0x2000f0dc
+ 8010814:	20013efc 	.word	0x20013efc
  8010818:	20004630 	.word	0x20004630
  801081c:	20000210 	.word	0x20000210
  8010820:	2000000a 	.word	0x2000000a
- 8010824:	2000f0fd 	.word	0x2000f0fd
+ 8010824:	20013f1d 	.word	0x20013f1d
  8010828:	20003c24 	.word	0x20003c24
- 801082c:	2000eff4 	.word	0x2000eff4
- 8010830:	2000f02c 	.word	0x2000f02c
+ 801082c:	20013e14 	.word	0x20013e14
+ 8010830:	20013e4c 	.word	0x20013e4c
  8010834:	200041dc 	.word	0x200041dc
- 8010838:	2000efe4 	.word	0x2000efe4
- 801083c:	2000f004 	.word	0x2000f004
+ 8010838:	20013e04 	.word	0x20013e04
+ 801083c:	20013e24 	.word	0x20013e24
  8010840:	200041fc 	.word	0x200041fc
  8010844:	20004860 	.word	0x20004860
  8010848:	200041f4 	.word	0x200041f4
@@ -39008,9 +39008,9 @@ void maze_maker(int direction, int front_SEN, int left_SEN, int right_SEN,
  8010a40:	e7c2      	b.n	80109c8 <maze_maker+0x428>
  8010a42:	bf00      	nop
  8010a44:	20004ae0 	.word	0x20004ae0
- 8010a48:	2000f0dc 	.word	0x2000f0dc
- 8010a4c:	2000e8dc 	.word	0x2000e8dc
- 8010a50:	2000f0b4 	.word	0x2000f0b4
+ 8010a48:	20013efc 	.word	0x20013efc
+ 8010a4c:	200136fc 	.word	0x200136fc
+ 8010a50:	20013ed4 	.word	0x20013ed4
  8010a54:	20004866 	.word	0x20004866
 
 08010a58 <maze_maker2>:
@@ -39459,17 +39459,17 @@ void maze_maker2(int direction, int front_SEN, int left_SEN, int right_SEN,
  8010d1a:	2c00      	cmp	r4, #0
  8010d1c:	d058      	beq.n	8010dd0 <maze_maker2+0x378>
  8010d1e:	e04e      	b.n	8010dbe <maze_maker2+0x366>
- 8010d20:	2000f0b4 	.word	0x2000f0b4
+ 8010d20:	20013ed4 	.word	0x20013ed4
  8010d24:	20004866 	.word	0x20004866
  8010d28:	20004ae0 	.word	0x20004ae0
- 8010d2c:	2000f0dc 	.word	0x2000f0dc
+ 8010d2c:	20013efc 	.word	0x20013efc
  8010d30:	20004630 	.word	0x20004630
- 8010d34:	2000ecac 	.word	0x2000ecac
- 8010d38:	2000ecfc 	.word	0x2000ecfc
+ 8010d34:	20013acc 	.word	0x20013acc
+ 8010d38:	20013b1c 	.word	0x20013b1c
  8010d3c:	2000000a 	.word	0x2000000a
  8010d40:	200041dc 	.word	0x200041dc
- 8010d44:	2000efe4 	.word	0x2000efe4
- 8010d48:	2000f004 	.word	0x2000f004
+ 8010d44:	20013e04 	.word	0x20013e04
+ 8010d48:	20013e24 	.word	0x20013e24
  8010d4c:	200041fc 	.word	0x200041fc
 			if (box == 39) {
 
@@ -39724,22 +39724,22 @@ void maze_maker2(int direction, int front_SEN, int left_SEN, int right_SEN,
  8010f2e:	f73f aed9 	bgt.w	8010ce4 <maze_maker2+0x28c>
  8010f32:	e6d4      	b.n	8010cde <maze_maker2+0x286>
  8010f34:	20004866 	.word	0x20004866
- 8010f38:	2000f0dc 	.word	0x2000f0dc
+ 8010f38:	20013efc 	.word	0x20013efc
  8010f3c:	20000210 	.word	0x20000210
  8010f40:	20004838 	.word	0x20004838
  8010f44:	20004860 	.word	0x20004860
- 8010f48:	2000f0fd 	.word	0x2000f0fd
+ 8010f48:	20013f1d 	.word	0x20013f1d
  8010f4c:	20003c24 	.word	0x20003c24
- 8010f50:	2000eff4 	.word	0x2000eff4
- 8010f54:	2000f02c 	.word	0x2000f02c
- 8010f58:	2000e8dc 	.word	0x2000e8dc
- 8010f5c:	2000efe4 	.word	0x2000efe4
+ 8010f50:	20013e14 	.word	0x20013e14
+ 8010f54:	20013e4c 	.word	0x20013e4c
+ 8010f58:	200136fc 	.word	0x200136fc
+ 8010f5c:	20013e04 	.word	0x20013e04
  8010f60:	200041dc 	.word	0x200041dc
  8010f64:	200041fc 	.word	0x200041fc
- 8010f68:	2000f004 	.word	0x2000f004
- 8010f6c:	2000eff5 	.word	0x2000eff5
+ 8010f68:	20013e24 	.word	0x20013e24
+ 8010f6c:	20013e15 	.word	0x20013e15
  8010f70:	200041f4 	.word	0x200041f4
- 8010f74:	2000ecac 	.word	0x2000ecac
+ 8010f74:	20013acc 	.word	0x20013acc
 
 08010f78 <maze_makerhosuu>:
 
@@ -40071,17 +40071,17 @@ void maze_makerhosuu(int direction, int x, int y) {
  801117c:	20004630 	.word	0x20004630
  8011180:	20000210 	.word	0x20000210
  8011184:	2000000a 	.word	0x2000000a
- 8011188:	2000f0fd 	.word	0x2000f0fd
+ 8011188:	20013f1d 	.word	0x20013f1d
  801118c:	20003c24 	.word	0x20003c24
- 8011190:	2000eff4 	.word	0x2000eff4
- 8011194:	2000f02c 	.word	0x2000f02c
- 8011198:	2000e8dc 	.word	0x2000e8dc
+ 8011190:	20013e14 	.word	0x20013e14
+ 8011194:	20013e4c 	.word	0x20013e4c
+ 8011198:	200136fc 	.word	0x200136fc
  801119c:	200041dc 	.word	0x200041dc
- 80111a0:	2000efe4 	.word	0x2000efe4
- 80111a4:	2000f004 	.word	0x2000f004
+ 80111a0:	20013e04 	.word	0x20013e04
+ 80111a4:	20013e24 	.word	0x20013e24
  80111a8:	200041fc 	.word	0x200041fc
  80111ac:	20004866 	.word	0x20004866
- 80111b0:	2000f0dc 	.word	0x2000f0dc
+ 80111b0:	20013efc 	.word	0x20013efc
  80111b4:	20004860 	.word	0x20004860
  80111b8:	200041f4 	.word	0x200041f4
 
@@ -40475,18 +40475,18 @@ void maze_makerST(int STmass) { //いつか作る直進優先の歩数マップ
  8011460:	20004630 	.word	0x20004630
  8011464:	20000210 	.word	0x20000210
  8011468:	2000000a 	.word	0x2000000a
- 801146c:	2000f0fd 	.word	0x2000f0fd
+ 801146c:	20013f1d 	.word	0x20013f1d
  8011470:	20003c24 	.word	0x20003c24
- 8011474:	2000eff4 	.word	0x2000eff4
- 8011478:	2000f02c 	.word	0x2000f02c
- 801147c:	2000e8dc 	.word	0x2000e8dc
+ 8011474:	20013e14 	.word	0x20013e14
+ 8011478:	20013e4c 	.word	0x20013e4c
+ 801147c:	200136fc 	.word	0x200136fc
  8011480:	200041dc 	.word	0x200041dc
  8011484:	200049b4 	.word	0x200049b4
- 8011488:	2000efe4 	.word	0x2000efe4
- 801148c:	2000f004 	.word	0x2000f004
+ 8011488:	20013e04 	.word	0x20013e04
+ 801148c:	20013e24 	.word	0x20013e24
  8011490:	200041fc 	.word	0x200041fc
  8011494:	20004866 	.word	0x20004866
- 8011498:	2000f0dc 	.word	0x2000f0dc
+ 8011498:	20013efc 	.word	0x20013efc
  801149c:	20004860 	.word	0x20004860
  80114a0:	200041f4 	.word	0x200041f4
  80114a4:	9c03      	ldr	r4, [sp, #12]
@@ -40957,17 +40957,17 @@ void maze_makerRun(int direction, int front_SEN, int left_SEN, int right_SEN,
  801177a:	d058      	beq.n	801182e <maze_makerRun+0x382>
  801177c:	e04e      	b.n	801181c <maze_makerRun+0x370>
  801177e:	bf00      	nop
- 8011780:	2000f0b4 	.word	0x2000f0b4
+ 8011780:	20013ed4 	.word	0x20013ed4
  8011784:	20004866 	.word	0x20004866
  8011788:	20004ae0 	.word	0x20004ae0
- 801178c:	2000f0dc 	.word	0x2000f0dc
+ 801178c:	20013efc 	.word	0x20013efc
  8011790:	20004630 	.word	0x20004630
- 8011794:	2000ecac 	.word	0x2000ecac
- 8011798:	2000ecfc 	.word	0x2000ecfc
+ 8011794:	20013acc 	.word	0x20013acc
+ 8011798:	20013b1c 	.word	0x20013b1c
  801179c:	2000000a 	.word	0x2000000a
  80117a0:	200041dc 	.word	0x200041dc
- 80117a4:	2000efe4 	.word	0x2000efe4
- 80117a8:	2000f004 	.word	0x2000f004
+ 80117a4:	20013e04 	.word	0x20013e04
+ 80117a8:	20013e24 	.word	0x20013e24
  80117ac:	200041fc 	.word	0x200041fc
 			if (count_box[box] == 256) {
  80117b0:	9c07      	ldr	r4, [sp, #28]
@@ -41238,22 +41238,22 @@ void maze_makerRun(int direction, int front_SEN, int left_SEN, int right_SEN,
  80119c6:	f73f aebd 	bgt.w	8011744 <maze_makerRun+0x298>
  80119ca:	e6b8      	b.n	801173e <maze_makerRun+0x292>
  80119cc:	20004866 	.word	0x20004866
- 80119d0:	2000f0dc 	.word	0x2000f0dc
+ 80119d0:	20013efc 	.word	0x20013efc
  80119d4:	20000210 	.word	0x20000210
  80119d8:	20004838 	.word	0x20004838
  80119dc:	20004860 	.word	0x20004860
- 80119e0:	2000f0fd 	.word	0x2000f0fd
+ 80119e0:	20013f1d 	.word	0x20013f1d
  80119e4:	20003c24 	.word	0x20003c24
- 80119e8:	2000eff4 	.word	0x2000eff4
- 80119ec:	2000f02c 	.word	0x2000f02c
- 80119f0:	2000e8dc 	.word	0x2000e8dc
- 80119f4:	2000efe4 	.word	0x2000efe4
+ 80119e8:	20013e14 	.word	0x20013e14
+ 80119ec:	20013e4c 	.word	0x20013e4c
+ 80119f0:	200136fc 	.word	0x200136fc
+ 80119f4:	20013e04 	.word	0x20013e04
  80119f8:	200041dc 	.word	0x200041dc
  80119fc:	200041fc 	.word	0x200041fc
- 8011a00:	2000f004 	.word	0x2000f004
- 8011a04:	2000eff5 	.word	0x2000eff5
+ 8011a00:	20013e24 	.word	0x20013e24
+ 8011a04:	20013e15 	.word	0x20013e15
  8011a08:	200041f4 	.word	0x200041f4
- 8011a0c:	2000ecac 	.word	0x2000ecac
+ 8011a0c:	20013acc 	.word	0x20013acc
 
 08011a10 <maze_makeronly>:
 
@@ -41657,11 +41657,11 @@ void maze_makeronly(int direction, int front_SEN, int left_SEN, int right_SEN,
  8011c62:	dce0      	bgt.n	8011c26 <maze_makeronly+0x216>
  8011c64:	e7dd      	b.n	8011c22 <maze_makeronly+0x212>
  8011c66:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8011c68:	2000f0b4 	.word	0x2000f0b4
+ 8011c68:	20013ed4 	.word	0x20013ed4
  8011c6c:	20004866 	.word	0x20004866
- 8011c70:	2000e8dc 	.word	0x2000e8dc
+ 8011c70:	200136fc 	.word	0x200136fc
  8011c74:	20004ae0 	.word	0x20004ae0
- 8011c78:	2000f0dc 	.word	0x2000f0dc
+ 8011c78:	20013efc 	.word	0x20013efc
 
 08011c7c <maze_makerback>:
 
@@ -42086,17 +42086,17 @@ void maze_makerback(int direction, int front_SEN, int left_SEN, int right_SEN,
  8011f22:	2c00      	cmp	r4, #0
  8011f24:	d058      	beq.n	8011fd8 <maze_makerback+0x35c>
  8011f26:	e04e      	b.n	8011fc6 <maze_makerback+0x34a>
- 8011f28:	2000f0b4 	.word	0x2000f0b4
+ 8011f28:	20013ed4 	.word	0x20013ed4
  8011f2c:	20004866 	.word	0x20004866
  8011f30:	20004ae0 	.word	0x20004ae0
- 8011f34:	2000f0dc 	.word	0x2000f0dc
+ 8011f34:	20013efc 	.word	0x20013efc
  8011f38:	20004630 	.word	0x20004630
- 8011f3c:	2000ecac 	.word	0x2000ecac
- 8011f40:	2000ecfc 	.word	0x2000ecfc
+ 8011f3c:	20013acc 	.word	0x20013acc
+ 8011f40:	20013b1c 	.word	0x20013b1c
  8011f44:	2000000a 	.word	0x2000000a
  8011f48:	200041dc 	.word	0x200041dc
- 8011f4c:	2000efe4 	.word	0x2000efe4
- 8011f50:	2000f004 	.word	0x2000f004
+ 8011f4c:	20013e04 	.word	0x20013e04
+ 8011f50:	20013e24 	.word	0x20013e24
  8011f54:	200041fc 	.word	0x200041fc
 			if (box == 39) {
 
@@ -42350,22 +42350,22 @@ void maze_makerback(int direction, int front_SEN, int left_SEN, int right_SEN,
  8012136:	f73f aed9 	bgt.w	8011eec <maze_makerback+0x270>
  801213a:	e6d4      	b.n	8011ee6 <maze_makerback+0x26a>
  801213c:	20004866 	.word	0x20004866
- 8012140:	2000f0dc 	.word	0x2000f0dc
+ 8012140:	20013efc 	.word	0x20013efc
  8012144:	20000210 	.word	0x20000210
  8012148:	20004838 	.word	0x20004838
  801214c:	20004860 	.word	0x20004860
- 8012150:	2000f0fd 	.word	0x2000f0fd
+ 8012150:	20013f1d 	.word	0x20013f1d
  8012154:	20003c24 	.word	0x20003c24
- 8012158:	2000eff4 	.word	0x2000eff4
- 801215c:	2000f02c 	.word	0x2000f02c
- 8012160:	2000e8dc 	.word	0x2000e8dc
- 8012164:	2000efe4 	.word	0x2000efe4
+ 8012158:	20013e14 	.word	0x20013e14
+ 801215c:	20013e4c 	.word	0x20013e4c
+ 8012160:	200136fc 	.word	0x200136fc
+ 8012164:	20013e04 	.word	0x20013e04
  8012168:	200041dc 	.word	0x200041dc
  801216c:	200041fc 	.word	0x200041fc
- 8012170:	2000f004 	.word	0x2000f004
- 8012174:	2000eff5 	.word	0x2000eff5
+ 8012170:	20013e24 	.word	0x20013e24
+ 8012174:	20013e15 	.word	0x20013e15
  8012178:	200041f4 	.word	0x200041f4
- 801217c:	2000ecac 	.word	0x2000ecac
+ 801217c:	20013acc 	.word	0x20013acc
 
 08012180 <maze_makerslant>:
 
@@ -42680,20 +42680,20 @@ void maze_makerslant(void) { //いつか作る直進優先の歩数マップ
  801232a:	9403      	str	r4, [sp, #12]
  801232c:	e061      	b.n	80123f2 <maze_makerslant+0x272>
  801232e:	bf00      	nop
- 8012330:	2000e8de 	.word	0x2000e8de
+ 8012330:	200136fe 	.word	0x200136fe
  8012334:	20000210 	.word	0x20000210
  8012338:	20004866 	.word	0x20004866
- 801233c:	2000f0dc 	.word	0x2000f0dc
+ 801233c:	20013efc 	.word	0x20013efc
  8012340:	20004860 	.word	0x20004860
  8012344:	200041fc 	.word	0x200041fc
- 8012348:	2000f0fd 	.word	0x2000f0fd
+ 8012348:	20013f1d 	.word	0x20013f1d
  801234c:	20003c24 	.word	0x20003c24
- 8012350:	2000eff4 	.word	0x2000eff4
- 8012354:	2000f02c 	.word	0x2000f02c
- 8012358:	2000e8dc 	.word	0x2000e8dc
+ 8012350:	20013e14 	.word	0x20013e14
+ 8012354:	20013e4c 	.word	0x20013e4c
+ 8012358:	200136fc 	.word	0x200136fc
  801235c:	200041dc 	.word	0x200041dc
- 8012360:	2000efe4 	.word	0x2000efe4
- 8012364:	2000f004 	.word	0x2000f004
+ 8012360:	20013e04 	.word	0x20013e04
+ 8012364:	20013e24 	.word	0x20013e24
  8012368:	200041f4 	.word	0x200041f4
 			if (column_exist >= 1) {
  801236c:	b121      	cbz	r1, 8012378 <maze_makerslant+0x1f8>
@@ -42841,20 +42841,20 @@ void maze_makerslant(void) { //いつか作る直進優先の歩数マップ
 							walk_direction[coordinate + 1] = 1;
  8012486:	f04f 0601 	mov.w	r6, #1
  801248a:	e6c8      	b.n	801221e <maze_makerslant+0x9e>
- 801248c:	2000e8dc 	.word	0x2000e8dc
+ 801248c:	200136fc 	.word	0x200136fc
  8012490:	200049b4 	.word	0x200049b4
  8012494:	2000000a 	.word	0x2000000a
  8012498:	20003c24 	.word	0x20003c24
- 801249c:	2000eff4 	.word	0x2000eff4
- 80124a0:	2000f0fd 	.word	0x2000f0fd
- 80124a4:	2000f02c 	.word	0x2000f02c
+ 801249c:	20013e14 	.word	0x20013e14
+ 80124a0:	20013f1d 	.word	0x20013f1d
+ 80124a4:	20013e4c 	.word	0x20013e4c
  80124a8:	200041fc 	.word	0x200041fc
  80124ac:	200041dc 	.word	0x200041dc
  80124b0:	20004630 	.word	0x20004630
- 80124b4:	2000efe4 	.word	0x2000efe4
- 80124b8:	2000f004 	.word	0x2000f004
+ 80124b4:	20013e04 	.word	0x20013e04
+ 80124b8:	20013e24 	.word	0x20013e24
  80124bc:	20004866 	.word	0x20004866
- 80124c0:	2000f0dc 	.word	0x2000f0dc
+ 80124c0:	20013efc 	.word	0x20013efc
 
 080124c4 <maze_display>:
 
@@ -43208,20 +43208,20 @@ void maze_display(void) {
  80126aa:	e7e4      	b.n	8012676 <maze_display+0x1b2>
  80126ac:	20000210 	.word	0x20000210
  80126b0:	0801cbfa 	.word	0x0801cbfa
- 80126b4:	2000f0fa 	.word	0x2000f0fa
+ 80126b4:	20013f1a 	.word	0x20013f1a
  80126b8:	20004630 	.word	0x20004630
  80126bc:	0801cc5c 	.word	0x0801cc5c
- 80126c0:	2000f1e4 	.word	0x2000f1e4
+ 80126c0:	20014004 	.word	0x20014004
  80126c4:	0801cc66 	.word	0x0801cc66
  80126c8:	0801cc68 	.word	0x0801cc68
  80126cc:	0801cc61 	.word	0x0801cc61
  80126d0:	0801cc5a 	.word	0x0801cc5a
- 80126d4:	2000f0dc 	.word	0x2000f0dc
+ 80126d4:	20013efc 	.word	0x20013efc
  80126d8:	20004ae0 	.word	0x20004ae0
  80126dc:	20004866 	.word	0x20004866
  80126e0:	0801ccd2 	.word	0x0801ccd2
  80126e4:	0801cccb 	.word	0x0801cccb
- 80126e8:	2000f0b4 	.word	0x2000f0b4
+ 80126e8:	20013ed4 	.word	0x20013ed4
 
 080126ec <mode_decision>:
 #include "define.h"
@@ -43462,7 +43462,7 @@ return main_mode;
  801289c:	43480000 	.word	0x43480000
  80128a0:	200041f2 	.word	0x200041f2
  80128a4:	20004614 	.word	0x20004614
- 80128a8:	2000efe8 	.word	0x2000efe8
+ 80128a8:	20013e08 	.word	0x20013e08
  80128ac:	00000000 	.word	0x00000000
 
 080128b0 <motor_PID>:
@@ -43515,10 +43515,10 @@ void motor_PID(void) {
  80128e4:	e013      	b.n	801290e <motor_PID+0x5e>
  80128e6:	bf00      	nop
  80128e8:	20004624 	.word	0x20004624
- 80128ec:	2000effc 	.word	0x2000effc
+ 80128ec:	20013e1c 	.word	0x20013e1c
  80128f0:	20004610 	.word	0x20004610
  80128f4:	00000000 	.word	0x00000000
- 80128f8:	2000e870 	.word	0x2000e870
+ 80128f8:	20013690 	.word	0x20013690
  80128fc:	20003fe8 	.word	0x20003fe8
  8012900:	20004bb0 	.word	0x20004bb0
 	if (modeacc == 1) {
@@ -43637,10 +43637,10 @@ void motor_PID(void) {
  80129da:	6809      	ldr	r1, [r1, #0]
  80129dc:	2900      	cmp	r1, #0
  80129de:	f040 818e 	bne.w	8012cfe <motor_PID+0x44e>
-			Gyro.delta_error = Gyro.error - Gyro.old_error;
 			Gyro.sigma_error += Gyro.error;
 			PID_all_R += PID_turn;
 			PID_all_L -= PID_turn;
+
 		} else {
 			PID_turn = Ktp * ((Turn_ideal_speed + pulse_speed) - angle_speed)
  80129e2:	edd3 7a00 	vldr	s15, [r3]
@@ -43933,23 +43933,23 @@ void motor_PID(void) {
  8012c54:	4067c3a5 	.word	0x4067c3a5
  8012c58:	200041f8 	.word	0x200041f8
  8012c5c:	20004abc 	.word	0x20004abc
- 8012c60:	2000eef4 	.word	0x2000eef4
+ 8012c60:	20013d14 	.word	0x20013d14
  8012c64:	20004ad0 	.word	0x20004ad0
  8012c68:	20004c14 	.word	0x20004c14
  8012c6c:	20004c28 	.word	0x20004c28
  8012c70:	20004bac 	.word	0x20004bac
- 8012c74:	2000f010 	.word	0x2000f010
+ 8012c74:	20013e30 	.word	0x20013e30
  8012c78:	20004208 	.word	0x20004208
  8012c7c:	20004c10 	.word	0x20004c10
  8012c80:	40040000 	.word	0x40040000
  8012c84:	20004620 	.word	0x20004620
  8012c88:	20003a90 	.word	0x20003a90
- 8012c8c:	2000e87c 	.word	0x2000e87c
- 8012c90:	2000e880 	.word	0x2000e880
- 8012c94:	2000eca4 	.word	0x2000eca4
- 8012c98:	2000eca5 	.word	0x2000eca5
- 8012c9c:	2000ee98 	.word	0x2000ee98
- 8012ca0:	2000efa8 	.word	0x2000efa8
+ 8012c8c:	2001369c 	.word	0x2001369c
+ 8012c90:	200136a0 	.word	0x200136a0
+ 8012c94:	20013ac4 	.word	0x20013ac4
+ 8012c98:	20013ac5 	.word	0x20013ac5
+ 8012c9c:	20013cb8 	.word	0x20013cb8
+ 8012ca0:	20013dc8 	.word	0x20013dc8
 				wall_status = 2;
  8012ca4:	2002      	movs	r0, #2
  8012ca6:	7038      	strb	r0, [r7, #0]
@@ -44128,8 +44128,8 @@ void motor_PID(void) {
  8012d9c:	ddf3      	ble.n	8012d86 <motor_PID+0x4d6>
  8012d9e:	e7f0      	b.n	8012d82 <motor_PID+0x4d2>
  8012da0:	20004acc 	.word	0x20004acc
- 8012da4:	2000ee90 	.word	0x2000ee90
- 8012da8:	2000efa8 	.word	0x2000efa8
+ 8012da4:	20013cb0 	.word	0x20013cb0
+ 8012da8:	20013dc8 	.word	0x20013dc8
 					&& SEND[4] >= -SENstayL && SEND[4] <= SENstayL) {
  8012dac:	49c8      	ldr	r1, [pc, #800]	; (80130d0 <motor_PID+0x820>)
  8012dae:	6909      	ldr	r1, [r1, #16]
@@ -44563,16 +44563,16 @@ void motor_PID(void) {
  80130c4:	3f962b99 	.word	0x3f962b99
  80130c8:	97bfd329 	.word	0x97bfd329
  80130cc:	4049a52f 	.word	0x4049a52f
- 80130d0:	2000efa8 	.word	0x2000efa8
- 80130d4:	2000ee90 	.word	0x2000ee90
+ 80130d0:	20013dc8 	.word	0x20013dc8
+ 80130d4:	20013cb0 	.word	0x20013cb0
  80130d8:	20004c24 	.word	0x20004c24
  80130dc:	42aa0000 	.word	0x42aa0000
  80130e0:	200041e4 	.word	0x200041e4
- 80130e4:	2000eca4 	.word	0x2000eca4
+ 80130e4:	20013ac4 	.word	0x20013ac4
  80130e8:	20003a90 	.word	0x20003a90
  80130ec:	20004c28 	.word	0x20004c28
  80130f0:	20004c10 	.word	0x20004c10
- 80130f4:	2000f024 	.word	0x2000f024
+ 80130f4:	20013e44 	.word	0x20013e44
  80130f8:	44480000 	.word	0x44480000
  80130fc:	20004ad0 	.word	0x20004ad0
  8013100:	44960000 	.word	0x44960000
@@ -44928,14 +44928,14 @@ void motor_PID(void) {
  80133d4:	455ac000 	.word	0x455ac000
  80133d8:	40a00000 	.word	0x40a00000
  80133dc:	20004620 	.word	0x20004620
- 80133e0:	2000f024 	.word	0x2000f024
+ 80133e0:	20013e44 	.word	0x20013e44
  80133e4:	20004acc 	.word	0x20004acc
  80133e8:	20004ad0 	.word	0x20004ad0
  80133ec:	40440000 	.word	0x40440000
  80133f0:	408f4000 	.word	0x408f4000
  80133f4:	3fe00000 	.word	0x3fe00000
  80133f8:	20004c10 	.word	0x20004c10
- 80133fc:	2000ee98 	.word	0x2000ee98
+ 80133fc:	20013cb8 	.word	0x20013cb8
  8013400:	42aa0000 	.word	0x42aa0000
  8013404:	20004c28 	.word	0x20004c28
  8013408:	b7b349bf 	.word	0xb7b349bf
@@ -45075,10 +45075,10 @@ void get_duty(float V_R, float V_L) {
 }
  8013540:	bd38      	pop	{r3, r4, r5, pc}
  8013542:	bf00      	nop
- 8013544:	2000f00c 	.word	0x2000f00c
+ 8013544:	20013e2c 	.word	0x20013e2c
  8013548:	40020000 	.word	0x40020000
  801354c:	44d1e000 	.word	0x44d1e000
- 8013550:	2000efc0 	.word	0x2000efc0
+ 8013550:	20013de0 	.word	0x20013de0
  8013554:	40020400 	.word	0x40020400
 
 08013558 <get_duty2>:
@@ -45205,8 +45205,8 @@ void get_duty2(int V_R, int V_L) {
  8013622:	602b      	str	r3, [r5, #0]
  8013624:	e7bd      	b.n	80135a2 <get_duty2+0x4a>
  8013626:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
- 8013628:	2000f00c 	.word	0x2000f00c
- 801362c:	2000efc0 	.word	0x2000efc0
+ 8013628:	20013e2c 	.word	0x20013e2c
+ 801362c:	20013de0 	.word	0x20013de0
  8013630:	40020000 	.word	0x40020000
  8013634:	40020400 	.word	0x40020400
 
@@ -45300,7 +45300,7 @@ void const_accel(float input_start_speed, float input_max_speed,
  80136a0:	2001      	movs	r0, #1
  80136a2:	f7ec fe15 	bl	80002d0 <HAL_Delay>
  80136a6:	e7e5      	b.n	8013674 <const_accel+0x3c>
- 80136a8:	2000f0d8 	.word	0x2000f0d8
+ 80136a8:	20013ef8 	.word	0x20013ef8
  80136ac:	20004834 	.word	0x20004834
  80136b0:	20004c0c 	.word	0x20004c0c
  80136b4:	20004ba4 	.word	0x20004ba4
@@ -45511,16 +45511,16 @@ void straight_const_accel(float input_min_distance, float input_start_speed,
  8013828:	20004c0c 	.word	0x20004c0c
  801382c:	20004ba4 	.word	0x20004ba4
  8013830:	20004ad8 	.word	0x20004ad8
- 8013834:	2000f0d8 	.word	0x2000f0d8
+ 8013834:	20013ef8 	.word	0x20013ef8
  8013838:	200041d8 	.word	0x200041d8
  801383c:	200041e0 	.word	0x200041e0
  8013840:	20004624 	.word	0x20004624
  8013844:	447a0000 	.word	0x447a0000
  8013848:	20004614 	.word	0x20004614
- 801384c:	2000efe8 	.word	0x2000efe8
+ 801384c:	20013e08 	.word	0x20013e08
  8013850:	200041f8 	.word	0x200041f8
- 8013854:	2000eef4 	.word	0x2000eef4
- 8013858:	2000efa0 	.word	0x2000efa0
+ 8013854:	20013d14 	.word	0x20013d14
+ 8013858:	20013dc0 	.word	0x20013dc0
 
 0801385c <const_speed>:
 	modeacc = 1;
@@ -45593,8 +45593,8 @@ void const_speed(float input_distance, float input_speed) {
  80138c0:	20004624 	.word	0x20004624
  80138c4:	20004ad8 	.word	0x20004ad8
  80138c8:	447a0000 	.word	0x447a0000
- 80138cc:	2000efa0 	.word	0x2000efa0
- 80138d0:	2000f0d8 	.word	0x2000f0d8
+ 80138cc:	20013dc0 	.word	0x20013dc0
+ 80138d0:	20013ef8 	.word	0x20013ef8
 
 080138d4 <const_speed_wallcut90>:
 void const_speed_wallcut90(float input_distance, float input_speed,
@@ -45741,18 +45741,18 @@ void const_speed_wallcut90(float input_distance, float input_speed,
  80139be:	e7ce      	b.n	801395e <const_speed_wallcut90+0x8a>
  80139c0:	20004ba4 	.word	0x20004ba4
  80139c4:	20004624 	.word	0x20004624
- 80139c8:	2000f260 	.word	0x2000f260
+ 80139c8:	20014080 	.word	0x20014080
  80139cc:	20004ad4 	.word	0x20004ad4
  80139d0:	20004ad8 	.word	0x20004ad8
- 80139d4:	2000efa0 	.word	0x2000efa0
- 80139d8:	2000f0d8 	.word	0x2000f0d8
+ 80139d4:	20013dc0 	.word	0x20013dc0
+ 80139d8:	20013ef8 	.word	0x20013ef8
  80139dc:	20004c0c 	.word	0x20004c0c
  80139e0:	420c0000 	.word	0x420c0000
  80139e4:	447a0000 	.word	0x447a0000
- 80139e8:	2000eeec 	.word	0x2000eeec
+ 80139e8:	20013d0c 	.word	0x20013d0c
  80139ec:	20004884 	.word	0x20004884
  80139f0:	20003c30 	.word	0x20003c30
- 80139f4:	2000f0fc 	.word	0x2000f0fc
+ 80139f4:	20013f1c 	.word	0x20013f1c
  80139f8:	20004618 	.word	0x20004618
 
 080139fc <const_speed_wallcut45>:
@@ -45898,16 +45898,16 @@ void const_speed_wallcut45(float input_distance, float input_speed,
  8013ae6:	e7ce      	b.n	8013a86 <const_speed_wallcut45+0x8a>
  8013ae8:	20004ba4 	.word	0x20004ba4
  8013aec:	20004624 	.word	0x20004624
- 8013af0:	2000f260 	.word	0x2000f260
+ 8013af0:	20014080 	.word	0x20014080
  8013af4:	20004884 	.word	0x20004884
  8013af8:	20004ad8 	.word	0x20004ad8
- 8013afc:	2000efa0 	.word	0x2000efa0
- 8013b00:	2000f0d8 	.word	0x2000f0d8
+ 8013afc:	20013dc0 	.word	0x20013dc0
+ 8013b00:	20013ef8 	.word	0x20013ef8
  8013b04:	20004c0c 	.word	0x20004c0c
  8013b08:	447a0000 	.word	0x447a0000
  8013b0c:	20003c30 	.word	0x20003c30
  8013b10:	20004ad4 	.word	0x20004ad4
- 8013b14:	2000eeec 	.word	0x2000eeec
+ 8013b14:	20013d0c 	.word	0x20013d0c
  8013b18:	20004ba0 	.word	0x20004ba0
  8013b1c:	20003c34 	.word	0x20003c34
 
@@ -46024,11 +46024,11 @@ void const_speed_wallcutslantR(float input_distance, float input_speed,
  8013bce:	e7e2      	b.n	8013b96 <const_speed_wallcutslantR+0x76>
  8013bd0:	20004ba4 	.word	0x20004ba4
  8013bd4:	20004624 	.word	0x20004624
- 8013bd8:	2000f260 	.word	0x2000f260
- 8013bdc:	2000eca8 	.word	0x2000eca8
+ 8013bd8:	20014080 	.word	0x20014080
+ 8013bdc:	20013ac8 	.word	0x20013ac8
  8013be0:	20004ad8 	.word	0x20004ad8
- 8013be4:	2000efa0 	.word	0x2000efa0
- 8013be8:	2000f0d8 	.word	0x2000f0d8
+ 8013be4:	20013dc0 	.word	0x20013dc0
+ 8013be8:	20013ef8 	.word	0x20013ef8
  8013bec:	20004c0c 	.word	0x20004c0c
  8013bf0:	447a0000 	.word	0x447a0000
  8013bf4:	20003c20 	.word	0x20003c20
@@ -46147,14 +46147,14 @@ void const_speed_wallcutslantL(float input_distance, float input_speed,
  8013caa:	e7e2      	b.n	8013c72 <const_speed_wallcutslantL+0x76>
  8013cac:	20004ba4 	.word	0x20004ba4
  8013cb0:	20004624 	.word	0x20004624
- 8013cb4:	2000f260 	.word	0x2000f260
+ 8013cb4:	20014080 	.word	0x20014080
  8013cb8:	20003c20 	.word	0x20003c20
  8013cbc:	20004ad8 	.word	0x20004ad8
- 8013cc0:	2000efa0 	.word	0x2000efa0
- 8013cc4:	2000f0d8 	.word	0x2000f0d8
+ 8013cc0:	20013dc0 	.word	0x20013dc0
+ 8013cc4:	20013ef8 	.word	0x20013ef8
  8013cc8:	20004c0c 	.word	0x20004c0c
  8013ccc:	447a0000 	.word	0x447a0000
- 8013cd0:	2000eca8 	.word	0x2000eca8
+ 8013cd0:	20013ac8 	.word	0x20013ac8
  8013cd4:	20004c08 	.word	0x20004c08
 
 08013cd8 <const_speed_mazemake>:
@@ -46284,20 +46284,20 @@ void const_speed_mazemake(float input_distance, float input_speed) {
  8013d8e:	e7ec      	b.n	8013d6a <const_speed_mazemake+0x92>
  8013d90:	20004ba4 	.word	0x20004ba4
  8013d94:	20004c0c 	.word	0x20004c0c
- 8013d98:	2000f260 	.word	0x2000f260
+ 8013d98:	20014080 	.word	0x20014080
  8013d9c:	20004ad8 	.word	0x20004ad8
- 8013da0:	2000efa0 	.word	0x2000efa0
- 8013da4:	2000f0d8 	.word	0x2000f0d8
+ 8013da0:	20013dc0 	.word	0x20013dc0
+ 8013da4:	20013ef8 	.word	0x20013ef8
  8013da8:	20004ad0 	.word	0x20004ad0
  8013dac:	20004204 	.word	0x20004204
  8013db0:	20004628 	.word	0x20004628
- 8013db4:	2000f00c 	.word	0x2000f00c
+ 8013db4:	20013e2c 	.word	0x20013e2c
  8013db8:	20004624 	.word	0x20004624
- 8013dbc:	2000efc0 	.word	0x2000efc0
- 8013dc0:	2000ee8c 	.word	0x2000ee8c
- 8013dc4:	2000ee94 	.word	0x2000ee94
+ 8013dbc:	20013de0 	.word	0x20013de0
+ 8013dc0:	20013cac 	.word	0x20013cac
+ 8013dc4:	20013cb4 	.word	0x20013cb4
  8013dc8:	20004094 	.word	0x20004094
- 8013dcc:	2000eefc 	.word	0x2000eefc
+ 8013dcc:	20013d1c 	.word	0x20013d1c
  8013dd0:	20004ba8 	.word	0x20004ba8
  8013dd4:	20004bd8 	.word	0x20004bd8
  8013dd8:	447a0000 	.word	0x447a0000
@@ -46416,17 +46416,17 @@ void const_speed_mazemakeback(float input_distance, float input_speed) {
  8013e84:	20004ba4 	.word	0x20004ba4
  8013e88:	20004c0c 	.word	0x20004c0c
  8013e8c:	20004ad8 	.word	0x20004ad8
- 8013e90:	2000efa0 	.word	0x2000efa0
- 8013e94:	2000f0d8 	.word	0x2000f0d8
+ 8013e90:	20013dc0 	.word	0x20013dc0
+ 8013e94:	20013ef8 	.word	0x20013ef8
  8013e98:	20004ad0 	.word	0x20004ad0
  8013e9c:	20004204 	.word	0x20004204
  8013ea0:	20004628 	.word	0x20004628
- 8013ea4:	2000f260 	.word	0x2000f260
+ 8013ea4:	20014080 	.word	0x20014080
  8013ea8:	20004624 	.word	0x20004624
- 8013eac:	2000ee8c 	.word	0x2000ee8c
- 8013eb0:	2000ee94 	.word	0x2000ee94
+ 8013eac:	20013cac 	.word	0x20013cac
+ 8013eb0:	20013cb4 	.word	0x20013cb4
  8013eb4:	20004094 	.word	0x20004094
- 8013eb8:	2000eefc 	.word	0x2000eefc
+ 8013eb8:	20013d1c 	.word	0x20013d1c
  8013ebc:	20004ba8 	.word	0x20004ba8
  8013ec0:	20004bd8 	.word	0x20004bd8
  8013ec4:	447a0000 	.word	0x447a0000
@@ -46521,12 +46521,12 @@ void const_speed_kitiku(float input_distance, float input_speed) {
  8013f4c:	20004ba4 	.word	0x20004ba4
  8013f50:	20004c0c 	.word	0x20004c0c
  8013f54:	20004ad8 	.word	0x20004ad8
- 8013f58:	2000efa0 	.word	0x2000efa0
- 8013f5c:	2000f0d8 	.word	0x2000f0d8
+ 8013f58:	20013dc0 	.word	0x20013dc0
+ 8013f5c:	20013ef8 	.word	0x20013ef8
  8013f60:	20004ad0 	.word	0x20004ad0
  8013f64:	20004204 	.word	0x20004204
  8013f68:	20004628 	.word	0x20004628
- 8013f6c:	2000f260 	.word	0x2000f260
+ 8013f6c:	20014080 	.word	0x20014080
  8013f70:	20004624 	.word	0x20004624
  8013f74:	447a0000 	.word	0x447a0000
 
@@ -46597,15 +46597,15 @@ __HAL_TIM_SET_COMPARE(&htim8, TIM_CHANNEL_4,duty_R);
  8013fde:	bf00      	nop
  8013fe0:	20004c0c 	.word	0x20004c0c
  8013fe4:	447a0000 	.word	0x447a0000
- 8013fe8:	2000f0d8 	.word	0x2000f0d8
+ 8013fe8:	20013ef8 	.word	0x20013ef8
  8013fec:	20004ba4 	.word	0x20004ba4
  8013ff0:	20004ad0 	.word	0x20004ad0
  8013ff4:	20004bac 	.word	0x20004bac
- 8013ff8:	2000effc 	.word	0x2000effc
+ 8013ff8:	20013e1c 	.word	0x20013e1c
  8013ffc:	20004610 	.word	0x20004610
- 8014000:	2000f260 	.word	0x2000f260
- 8014004:	2000efc0 	.word	0x2000efc0
- 8014008:	2000f00c 	.word	0x2000f00c
+ 8014000:	20014080 	.word	0x20014080
+ 8014004:	20013de0 	.word	0x20013de0
+ 8014008:	20013e2c 	.word	0x20013e2c
 
 0801400c <straight_table>:
 
@@ -46750,15 +46750,15 @@ HAL_TIM_PWM_Stop(&htim8, TIM_CHANNEL_4);
  80140ea:	bf00      	nop
  80140ec:	20004ba4 	.word	0x20004ba4
  80140f0:	20004ad0 	.word	0x20004ad0
- 80140f4:	2000f260 	.word	0x2000f260
+ 80140f4:	20014080 	.word	0x20014080
  80140f8:	20004ad8 	.word	0x20004ad8
- 80140fc:	2000efa0 	.word	0x2000efa0
- 8014100:	2000f0d8 	.word	0x2000f0d8
+ 80140fc:	20013dc0 	.word	0x20013dc0
+ 8014100:	20013ef8 	.word	0x20013ef8
  8014104:	20004c0c 	.word	0x20004c0c
  8014108:	20004204 	.word	0x20004204
  801410c:	20004628 	.word	0x20004628
- 8014110:	2000f00c 	.word	0x2000f00c
- 8014114:	2000efc0 	.word	0x2000efc0
+ 8014110:	20013e2c 	.word	0x20013e2c
+ 8014114:	20013de0 	.word	0x20013de0
 
 08014118 <no_angle>:
 
@@ -46868,15 +46868,15 @@ HAL_TIM_PWM_Stop_IT(&htim8, TIM_CHANNEL_3);
  80141a8:	20004204 	.word	0x20004204
  80141ac:	20004c18 	.word	0x20004c18
  80141b0:	20004ad0 	.word	0x20004ad0
- 80141b4:	2000f0d8 	.word	0x2000f0d8
+ 80141b4:	20013ef8 	.word	0x20013ef8
  80141b8:	20004ba4 	.word	0x20004ba4
  80141bc:	20004c2c 	.word	0x20004c2c
- 80141c0:	2000e888 	.word	0x2000e888
+ 80141c0:	200136a8 	.word	0x200136a8
  80141c4:	20003c28 	.word	0x20003c28
  80141c8:	20004bac 	.word	0x20004bac
  80141cc:	200041e0 	.word	0x200041e0
  80141d0:	20004834 	.word	0x20004834
- 80141d4:	2000f260 	.word	0x2000f260
+ 80141d4:	20014080 	.word	0x20014080
  80141d8:	20004624 	.word	0x20004624
 
 080141dc <no_move>:
@@ -46933,9 +46933,9 @@ while (1) {
  8014224:	20004204 	.word	0x20004204
  8014228:	20004ad0 	.word	0x20004ad0
  801422c:	40020400 	.word	0x40020400
- 8014230:	2000f0d8 	.word	0x2000f0d8
+ 8014230:	20013ef8 	.word	0x20013ef8
  8014234:	20004ba4 	.word	0x20004ba4
- 8014238:	2000f260 	.word	0x2000f260
+ 8014238:	20014080 	.word	0x20014080
  801423c:	20004624 	.word	0x20004624
 
 08014240 <interupt_angle_const_accel>:
@@ -47012,11 +47012,11 @@ __HAL_TIM_SET_COMPARE(&htim8, TIM_CHANNEL_4,duty_R);
  80142b4:	200041e0 	.word	0x200041e0
  80142b8:	20004834 	.word	0x20004834
  80142bc:	20004bac 	.word	0x20004bac
- 80142c0:	2000effc 	.word	0x2000effc
+ 80142c0:	20013e1c 	.word	0x20013e1c
  80142c4:	20004610 	.word	0x20004610
- 80142c8:	2000f260 	.word	0x2000f260
- 80142cc:	2000efc0 	.word	0x2000efc0
- 80142d0:	2000f00c 	.word	0x2000f00c
+ 80142c8:	20014080 	.word	0x20014080
+ 80142cc:	20013de0 	.word	0x20013de0
+ 80142d0:	20013e2c 	.word	0x20013e2c
 
 080142d4 <turning_accel>:
 
@@ -47149,9 +47149,9 @@ HAL_Delay(1);
  8014380:	200041e0 	.word	0x200041e0
  8014384:	20004c0c 	.word	0x20004c0c
  8014388:	20004834 	.word	0x20004834
- 801438c:	2000f260 	.word	0x2000f260
+ 801438c:	20014080 	.word	0x20014080
  8014390:	20004ad8 	.word	0x20004ad8
- 8014394:	2000f0d8 	.word	0x2000f0d8
+ 8014394:	20013ef8 	.word	0x20013ef8
  8014398:	20004bac 	.word	0x20004bac
  801439c:	447a0000 	.word	0x447a0000
  80143a0:	20003c28 	.word	0x20003c28
@@ -47348,14 +47348,14 @@ if (min_distance < 0
  80144d4:	20004c0c 	.word	0x20004c0c
  80144d8:	200041e0 	.word	0x200041e0
  80144dc:	20004bac 	.word	0x20004bac
- 80144e0:	2000f260 	.word	0x2000f260
+ 80144e0:	20014080 	.word	0x20014080
  80144e4:	20004ad8 	.word	0x20004ad8
- 80144e8:	2000f0d8 	.word	0x2000f0d8
+ 80144e8:	20013ef8 	.word	0x20013ef8
  80144ec:	20003c28 	.word	0x20003c28
  80144f0:	447a0000 	.word	0x447a0000
  80144f4:	20004624 	.word	0x20004624
  80144f8:	20004834 	.word	0x20004834
- 80144fc:	2000efbc 	.word	0x2000efbc
+ 80144fc:	20013ddc 	.word	0x20013ddc
 
 08014500 <turning_speed>:
 
@@ -47466,9 +47466,9 @@ HAL_Delay(1);
  8014596:	bf00      	nop
  8014598:	20004ba4 	.word	0x20004ba4
  801459c:	20004c0c 	.word	0x20004c0c
- 80145a0:	2000f260 	.word	0x2000f260
+ 80145a0:	20014080 	.word	0x20014080
  80145a4:	20004ad8 	.word	0x20004ad8
- 80145a8:	2000f0d8 	.word	0x2000f0d8
+ 80145a8:	20013ef8 	.word	0x20013ef8
  80145ac:	20004834 	.word	0x20004834
  80145b0:	200041d8 	.word	0x200041d8
  80145b4:	200041e0 	.word	0x200041e0
@@ -47629,16 +47629,16 @@ HAL_Delay(200);
  80146cc:	f7eb be00 	b.w	80002d0 <HAL_Delay>
  80146d0:	20004834 	.word	0x20004834
  80146d4:	00000000 	.word	0x00000000
- 80146d8:	2000efbc 	.word	0x2000efbc
- 80146dc:	2000f260 	.word	0x2000f260
+ 80146d8:	20013ddc 	.word	0x20013ddc
+ 80146dc:	20014080 	.word	0x20014080
  80146e0:	200041d8 	.word	0x200041d8
  80146e4:	200041e0 	.word	0x200041e0
- 80146e8:	2000e888 	.word	0x2000e888
+ 80146e8:	200136a8 	.word	0x200136a8
  80146ec:	20004bac 	.word	0x20004bac
  80146f0:	20003c28 	.word	0x20003c28
  80146f4:	20004c0c 	.word	0x20004c0c
- 80146f8:	2000f00c 	.word	0x2000f00c
- 80146fc:	2000efc0 	.word	0x2000efc0
+ 80146f8:	20013e2c 	.word	0x20013e2c
+ 80146fc:	20013de0 	.word	0x20013de0
  8014700:	20004c2c 	.word	0x20004c2c
 
 08014704 <interupt_slalom_const_accel>:
@@ -47713,11 +47713,11 @@ __HAL_TIM_SET_COMPARE(&htim8, TIM_CHANNEL_4,duty_R);
  801477c:	20004bac 	.word	0x20004bac
  8014780:	20004ad8 	.word	0x20004ad8
  8014784:	20004ad0 	.word	0x20004ad0
- 8014788:	2000effc 	.word	0x2000effc
+ 8014788:	20013e1c 	.word	0x20013e1c
  801478c:	20004610 	.word	0x20004610
- 8014790:	2000f260 	.word	0x2000f260
- 8014794:	2000efc0 	.word	0x2000efc0
- 8014798:	2000f00c 	.word	0x2000f00c
+ 8014790:	20014080 	.word	0x20014080
+ 8014794:	20013de0 	.word	0x20013de0
+ 8014798:	20013e2c 	.word	0x20013e2c
 
 0801479c <slalom_accel>:
 
@@ -47834,7 +47834,7 @@ HAL_Delay(1);
  8014838:	200041e0 	.word	0x200041e0
  801483c:	20004c0c 	.word	0x20004c0c
  8014840:	20004834 	.word	0x20004834
- 8014844:	2000f260 	.word	0x2000f260
+ 8014844:	20014080 	.word	0x20014080
  8014848:	20003c28 	.word	0x20003c28
  801484c:	447a0000 	.word	0x447a0000
  8014850:	20004624 	.word	0x20004624
@@ -48009,11 +48009,11 @@ if (min_distance < 0
  8014970:	20004c0c 	.word	0x20004c0c
  8014974:	200041e0 	.word	0x200041e0
  8014978:	20004bac 	.word	0x20004bac
- 801497c:	2000f260 	.word	0x2000f260
+ 801497c:	20014080 	.word	0x20014080
  8014980:	447a0000 	.word	0x447a0000
  8014984:	20004624 	.word	0x20004624
  8014988:	20004834 	.word	0x20004834
- 801498c:	2000efbc 	.word	0x2000efbc
+ 801498c:	20013ddc 	.word	0x20013ddc
 
 08014990 <slalom_speed>:
 
@@ -48117,7 +48117,7 @@ HAL_Delay(1);
  8014a1c:	20004834 	.word	0x20004834
  8014a20:	200041e0 	.word	0x200041e0
  8014a24:	20004c0c 	.word	0x20004c0c
- 8014a28:	2000f260 	.word	0x2000f260
+ 8014a28:	20014080 	.word	0x20014080
  8014a2c:	200041d8 	.word	0x200041d8
  8014a30:	20004bac 	.word	0x20004bac
  8014a34:	20003c28 	.word	0x20003c28
@@ -48296,25 +48296,25 @@ No_wall_modeL2 = 0;
  8014b4e:	bd70      	pop	{r4, r5, r6, pc}
  8014b50:	20004ba4 	.word	0x20004ba4
  8014b54:	20004bac 	.word	0x20004bac
- 8014b58:	2000f260 	.word	0x2000f260
+ 8014b58:	20014080 	.word	0x20014080
  8014b5c:	20004ad8 	.word	0x20004ad8
  8014b60:	00000000 	.word	0x00000000
- 8014b64:	2000efa0 	.word	0x2000efa0
- 8014b68:	2000f0d8 	.word	0x2000f0d8
+ 8014b64:	20013dc0 	.word	0x20013dc0
+ 8014b68:	20013ef8 	.word	0x20013ef8
  8014b6c:	20004834 	.word	0x20004834
- 8014b70:	2000efbc 	.word	0x2000efbc
+ 8014b70:	20013ddc 	.word	0x20013ddc
  8014b74:	200041d8 	.word	0x200041d8
  8014b78:	200041e0 	.word	0x200041e0
- 8014b7c:	2000e888 	.word	0x2000e888
+ 8014b7c:	200136a8 	.word	0x200136a8
  8014b80:	20003c28 	.word	0x20003c28
  8014b84:	20004ad0 	.word	0x20004ad0
  8014b88:	20004204 	.word	0x20004204
  8014b8c:	20004c0c 	.word	0x20004c0c
- 8014b90:	2000f00c 	.word	0x2000f00c
- 8014b94:	2000efc0 	.word	0x2000efc0
+ 8014b90:	20013e2c 	.word	0x20013e2c
+ 8014b94:	20013de0 	.word	0x20013de0
  8014b98:	20004c2c 	.word	0x20004c2c
  8014b9c:	20004abc 	.word	0x20004abc
- 8014ba0:	2000f0fc 	.word	0x2000f0fc
+ 8014ba0:	20013f1c 	.word	0x20013f1c
  8014ba4:	20004618 	.word	0x20004618
  8014ba8:	20004ba0 	.word	0x20004ba0
  8014bac:	20003c34 	.word	0x20003c34
@@ -48872,7 +48872,7 @@ speed1200.turn45in_R.f_ofset=25;
 speed1200.turn45in_R.e_ofset=60;
  8014eea:	f8c3 8080 	str.w	r8, [r3, #128]	; 0x80
  8014eee:	e055      	b.n	8014f9c <input_parameter+0x3ec>
- 8014ef0:	2000ed4c 	.word	0x2000ed4c
+ 8014ef0:	20013b6c 	.word	0x20013b6c
  8014ef4:	460ca000 	.word	0x460ca000
  8014ef8:	43fa0000 	.word	0x43fa0000
  8014efc:	42240000 	.word	0x42240000
@@ -49060,11 +49060,11 @@ void record_reset(void) {
  801508e:	4a06      	ldr	r2, [pc, #24]	; (80150a8 <record_reset+0x30>)
  8015090:	6013      	str	r3, [r2, #0]
  8015092:	4770      	bx	lr
- 8015094:	2000efd4 	.word	0x2000efd4
+ 8015094:	20013df4 	.word	0x20013df4
  8015098:	2000485c 	.word	0x2000485c
  801509c:	2000485d 	.word	0x2000485d
  80150a0:	20003fe4 	.word	0x20003fe4
- 80150a4:	2000f028 	.word	0x2000f028
+ 80150a4:	20013e48 	.word	0x20013e48
  80150a8:	20004858 	.word	0x20004858
 
 080150ac <record_in_enc>:
@@ -49139,18 +49139,18 @@ void record_in_enc(void) {
  801510a:	6809      	ldr	r1, [r1, #0]
  801510c:	6019      	str	r1, [r3, #0]
  801510e:	bd10      	pop	{r4, pc}
- 8015110:	2000efd4 	.word	0x2000efd4
+ 8015110:	20013df4 	.word	0x20013df4
  8015114:	20003fe4 	.word	0x20003fe4
  8015118:	200041f8 	.word	0x200041f8
  801511c:	20004c30 	.word	0x20004c30
  8015120:	20004ad0 	.word	0x20004ad0
- 8015124:	2000eef4 	.word	0x2000eef4
- 8015128:	2000ee9c 	.word	0x2000ee9c
- 801512c:	2000e88c 	.word	0x2000e88c
+ 8015124:	20013d14 	.word	0x20013d14
+ 8015128:	20013cbc 	.word	0x20013cbc
+ 801512c:	200136ac 	.word	0x200136ac
  8015130:	20003ff4 	.word	0x20003ff4
  8015134:	20004b00 	.word	0x20004b00
  8015138:	20004208 	.word	0x20004208
- 801513c:	2000ef00 	.word	0x2000ef00
+ 801513c:	20013d20 	.word	0x20013d20
  8015140:	20004c2c 	.word	0x20004c2c
 
 08015144 <record_in_gyro>:
@@ -49182,7 +49182,7 @@ void record_in_gyro(void) {
  8015160:	4770      	bx	lr
  8015162:	bf00      	nop
  8015164:	2000485c 	.word	0x2000485c
- 8015168:	2000f028 	.word	0x2000f028
+ 8015168:	20013e48 	.word	0x20013e48
  801516c:	20004c30 	.word	0x20004c30
  8015170:	20004208 	.word	0x20004208
 
@@ -49252,10 +49252,10 @@ void record_in_sen(void) {
  80151e8:	2000485d 	.word	0x2000485d
  80151ec:	20004858 	.word	0x20004858
  80151f0:	20003c38 	.word	0x20003c38
- 80151f4:	2000efa8 	.word	0x2000efa8
+ 80151f4:	20013dc8 	.word	0x20013dc8
  80151f8:	20004614 	.word	0x20004614
  80151fc:	20004c30 	.word	0x20004c30
- 8015200:	2000efe8 	.word	0x2000efe8
+ 8015200:	20013e08 	.word	0x20013e08
  8015204:	20004888 	.word	0x20004888
  8015208:	20003a90 	.word	0x20003a90
 
@@ -49339,15 +49339,15 @@ void record_out_enc(void) {
  8015296:	6023      	str	r3, [r4, #0]
  8015298:	e7c3      	b.n	8015222 <record_out_enc+0x16>
  801529a:	bf00      	nop
- 801529c:	2000f008 	.word	0x2000f008
+ 801529c:	20013e28 	.word	0x20013e28
  80152a0:	20003fe4 	.word	0x20003fe4
  80152a4:	20004b00 	.word	0x20004b00
  80152a8:	20003ff4 	.word	0x20003ff4
- 80152ac:	2000e88c 	.word	0x2000e88c
- 80152b0:	2000ee9c 	.word	0x2000ee9c
+ 80152ac:	200136ac 	.word	0x200136ac
+ 80152b0:	20013cbc 	.word	0x20013cbc
  80152b4:	0801ccd9 	.word	0x0801ccd9
  80152b8:	20004c30 	.word	0x20004c30
- 80152bc:	2000ef00 	.word	0x2000ef00
+ 80152bc:	20013d20 	.word	0x20013d20
 
 080152c0 <record_out_gyro>:
 
@@ -49383,8 +49383,8 @@ void record_out_gyro(void) {
  80152f6:	3301      	adds	r3, #1
  80152f8:	6023      	str	r3, [r4, #0]
  80152fa:	e7ea      	b.n	80152d2 <record_out_gyro+0x12>
- 80152fc:	2000f008 	.word	0x2000f008
- 8015300:	2000f028 	.word	0x2000f028
+ 80152fc:	20013e28 	.word	0x20013e28
+ 8015300:	20013e48 	.word	0x20013e48
  8015304:	20004c30 	.word	0x20004c30
  8015308:	0801cbc7 	.word	0x0801cbc7
 
@@ -49439,7 +49439,7 @@ void record_out_sen(void) {
  801536a:	602b      	str	r3, [r5, #0]
  801536c:	e7d7      	b.n	801531e <record_out_sen+0x12>
  801536e:	bf00      	nop
- 8015370:	2000f008 	.word	0x2000f008
+ 8015370:	20013e28 	.word	0x20013e28
  8015374:	20004858 	.word	0x20004858
  8015378:	20004888 	.word	0x20004888
  801537c:	0801ccef 	.word	0x0801ccef
@@ -49505,7 +49505,7 @@ void MX_SPI1_Init(void)
     Error_Handler();
  80153ba:	f7f8 b953 	b.w	800d664 <Error_Handler>
  80153be:	bd08      	pop	{r3, pc}
- 80153c0:	2000f204 	.word	0x2000f204
+ 80153c0:	20014024 	.word	0x20014024
  80153c4:	40013000 	.word	0x40013000
 
 080153c8 <HAL_SPI_MspInit>:
@@ -49740,7 +49740,7 @@ void ADC_IRQHandler(void) {
  80154ac:	4801      	ldr	r0, [pc, #4]	; (80154b4 <ADC_IRQHandler+0x8>)
  80154ae:	f7eb bac8 	b.w	8000a42 <HAL_ADC_IRQHandler>
  80154b2:	bf00      	nop
- 80154b4:	2000f100 	.word	0x2000f100
+ 80154b4:	20013f20 	.word	0x20013f20
 
 080154b8 <TIM8_CC_IRQHandler>:
  */
@@ -49752,7 +49752,7 @@ void TIM8_CC_IRQHandler(void) {
  80154b8:	4801      	ldr	r0, [pc, #4]	; (80154c0 <TIM8_CC_IRQHandler+0x8>)
  80154ba:	f7ef bc52 	b.w	8004d62 <HAL_TIM_IRQHandler>
  80154be:	bf00      	nop
- 80154c0:	2000f260 	.word	0x2000f260
+ 80154c0:	20014080 	.word	0x20014080
 
 080154c4 <TIM6_DAC_IRQHandler>:
 }
@@ -50224,18 +50224,18 @@ void TIM6_DAC_IRQHandler(void) {
  8015794:	f8d3 b000 	ldr.w	fp, [r3]
  8015798:	e044      	b.n	8015824 <TIM6_DAC_IRQHandler+0x360>
  801579a:	bf00      	nop
- 801579c:	2000f314 	.word	0x2000f314
- 80157a0:	2000f25c 	.word	0x2000f25c
+ 801579c:	20014134 	.word	0x20014134
+ 80157a0:	2001407c 	.word	0x2001407c
  80157a4:	20004624 	.word	0x20004624
  80157a8:	20004c0c 	.word	0x20004c0c
  80157ac:	20004830 	.word	0x20004830
  80157b0:	20004ad4 	.word	0x20004ad4
- 80157b4:	2000eeec 	.word	0x2000eeec
+ 80157b4:	20013d0c 	.word	0x20013d0c
  80157b8:	20004884 	.word	0x20004884
  80157bc:	20003c30 	.word	0x20003c30
- 80157c0:	2000eca8 	.word	0x2000eca8
+ 80157c0:	20013ac8 	.word	0x20013ac8
  80157c4:	20003c20 	.word	0x20003c20
- 80157c8:	2000f0fc 	.word	0x2000f0fc
+ 80157c8:	20013f1c 	.word	0x20013f1c
  80157cc:	20003a90 	.word	0x20003a90
  80157d0:	2000322c 	.word	0x2000322c
  80157d4:	20004618 	.word	0x20004618
@@ -50245,16 +50245,16 @@ void TIM6_DAC_IRQHandler(void) {
  80157e4:	20004ab8 	.word	0x20004ab8
  80157e8:	20004c08 	.word	0x20004c08
  80157ec:	2000483c 	.word	0x2000483c
- 80157f0:	2000e884 	.word	0x2000e884
+ 80157f0:	200136a4 	.word	0x200136a4
  80157f4:	20004208 	.word	0x20004208
  80157f8:	20004bac 	.word	0x20004bac
- 80157fc:	2000f000 	.word	0x2000f000
- 8015800:	2000f260 	.word	0x2000f260
- 8015804:	2000f29c 	.word	0x2000f29c
+ 80157fc:	20013e20 	.word	0x20013e20
+ 8015800:	20014080 	.word	0x20014080
+ 8015804:	200140bc 	.word	0x200140bc
  8015808:	40020400 	.word	0x40020400
  801580c:	20004094 	.word	0x20004094
  8015810:	20003138 	.word	0x20003138
- 8015814:	2000ee8c 	.word	0x2000ee8c
+ 8015814:	20013cac 	.word	0x20013cac
  8015818:	20004210 	.word	0x20004210
  801581c:	20004bb4 	.word	0x20004bb4
  8015820:	200041e4 	.word	0x200041e4
@@ -50490,22 +50490,22 @@ void TIM6_DAC_IRQHandler(void) {
  80159bc:	3ff19999 	.word	0x3ff19999
  80159c0:	20004bbc 	.word	0x20004bbc
  80159c4:	43a00000 	.word	0x43a00000
- 80159c8:	2000f260 	.word	0x2000f260
- 80159cc:	2000f29c 	.word	0x2000f29c
+ 80159c8:	20014080 	.word	0x20014080
+ 80159cc:	200140bc 	.word	0x200140bc
  80159d0:	40020400 	.word	0x40020400
  80159d4:	20004094 	.word	0x20004094
  80159d8:	20003138 	.word	0x20003138
- 80159dc:	2000ee8c 	.word	0x2000ee8c
+ 80159dc:	20013cac 	.word	0x20013cac
  80159e0:	200041f8 	.word	0x200041f8
- 80159e4:	2000eef4 	.word	0x2000eef4
+ 80159e4:	20013d14 	.word	0x20013d14
  80159e8:	20004ad0 	.word	0x20004ad0
  80159ec:	20004210 	.word	0x20004210
  80159f0:	20004bb4 	.word	0x20004bb4
  80159f4:	2000322c 	.word	0x2000322c
  80159f8:	20000258 	.word	0x20000258
  80159fc:	200041f2 	.word	0x200041f2
- 8015a00:	2000efc8 	.word	0x2000efc8
- 8015a04:	2000f100 	.word	0x2000f100
+ 8015a00:	20013de8 	.word	0x20013de8
+ 8015a04:	20013f20 	.word	0x20013f20
 
 08015a08 <DMA2_Stream0_IRQHandler>:
  */
@@ -50517,7 +50517,7 @@ void DMA2_Stream0_IRQHandler(void) {
  8015a08:	4801      	ldr	r0, [pc, #4]	; (8015a10 <DMA2_Stream0_IRQHandler+0x8>)
  8015a0a:	f7ec b81f 	b.w	8001a4c <HAL_DMA_IRQHandler>
  8015a0e:	bf00      	nop
- 8015a10:	2000f148 	.word	0x2000f148
+ 8015a10:	20013f68 	.word	0x20013f68
 
 08015a14 <initialise_monitor_handles>:
 uint8_t **environ = __env;
@@ -50535,7 +50535,7 @@ void initialise_monitor_handles()
  8015a1c:	f04f 30ff 	mov.w	r0, #4294967295
  8015a20:	4770      	bx	lr
  8015a22:	bf00      	nop
- 8015a24:	2000f410 	.word	0x2000f410
+ 8015a24:	20014230 	.word	0x20014230
 
 08015a28 <_gettimeofday>:
  8015a28:	4b02      	ldr	r3, [pc, #8]	; (8015a34 <_gettimeofday+0xc>)
@@ -50543,7 +50543,7 @@ void initialise_monitor_handles()
  8015a2c:	601a      	str	r2, [r3, #0]
  8015a2e:	f04f 30ff 	mov.w	r0, #4294967295
  8015a32:	4770      	bx	lr
- 8015a34:	2000f410 	.word	0x2000f410
+ 8015a34:	20014230 	.word	0x20014230
 
 08015a38 <_kill>:
   return -1;
@@ -50559,7 +50559,7 @@ int _kill(int32_t pid, int32_t sig)
 }
  8015a3e:	f04f 30ff 	mov.w	r0, #4294967295
  8015a42:	4770      	bx	lr
- 8015a44:	2000f410 	.word	0x2000f410
+ 8015a44:	20014230 	.word	0x20014230
 
 08015a48 <_exit>:
 
@@ -50605,7 +50605,7 @@ int _write(int32_t file, uint8_t *ptr, int32_t len)
  8015a6a:	3401      	adds	r4, #1
  8015a6c:	e7f2      	b.n	8015a54 <_write+0xa>
  8015a6e:	bf00      	nop
- 8015a70:	2000f3c8 	.word	0x2000f3c8
+ 8015a70:	200141e8 	.word	0x200141e8
 
 08015a74 <_sbrk>:
 {
@@ -50635,7 +50635,7 @@ int _write(int32_t file, uint8_t *ptr, int32_t len)
 }
  8015a86:	4770      	bx	lr
  8015a88:	2000021c 	.word	0x2000021c
- 8015a8c:	2000f414 	.word	0x2000f414
+ 8015a8c:	20014234 	.word	0x20014234
 
 08015a90 <_close>:
 
@@ -50649,7 +50649,7 @@ int _close(int32_t file)
 }
  8015a96:	f04f 30ff 	mov.w	r0, #4294967295
  8015a9a:	4770      	bx	lr
- 8015a9c:	2000f410 	.word	0x2000f410
+ 8015a9c:	20014230 	.word	0x20014230
 
 08015aa0 <_fstat>:
 
@@ -50664,7 +50664,7 @@ int _fstat(int32_t file, struct stat *st)
 }
  8015aa6:	f04f 30ff 	mov.w	r0, #4294967295
  8015aaa:	4770      	bx	lr
- 8015aac:	2000f410 	.word	0x2000f410
+ 8015aac:	20014230 	.word	0x20014230
 
 08015ab0 <_isatty>:
 
@@ -50679,7 +50679,7 @@ int _isatty(int32_t file)
  8015ab6:	2000      	movs	r0, #0
  8015ab8:	4770      	bx	lr
  8015aba:	bf00      	nop
- 8015abc:	2000f410 	.word	0x2000f410
+ 8015abc:	20014230 	.word	0x20014230
 
 08015ac0 <_lseek>:
 
@@ -50693,7 +50693,7 @@ int _lseek(int32_t file, int32_t ptr, int32_t dir)
 }
  8015ac6:	f04f 30ff 	mov.w	r0, #4294967295
  8015aca:	4770      	bx	lr
- 8015acc:	2000f410 	.word	0x2000f410
+ 8015acc:	20014230 	.word	0x20014230
 
 08015ad0 <_read>:
 
@@ -50707,7 +50707,7 @@ int _read(int32_t file, uint8_t *ptr, int32_t len)
 }
  8015ad6:	f04f 30ff 	mov.w	r0, #4294967295
  8015ada:	4770      	bx	lr
- 8015adc:	2000f410 	.word	0x2000f410
+ 8015adc:	20014230 	.word	0x20014230
 
 08015ae0 <_readlink>:
 
@@ -50721,7 +50721,7 @@ int _readlink(const char *path, char *buf, size_t bufsize)
 }
  8015ae6:	f04f 30ff 	mov.w	r0, #4294967295
  8015aea:	4770      	bx	lr
- 8015aec:	2000f410 	.word	0x2000f410
+ 8015aec:	20014230 	.word	0x20014230
 
 08015af0 <_open>:
 
@@ -50735,7 +50735,7 @@ int _open(const uint8_t *path, int32_t flags, int32_t mode)
 }
  8015af6:	f04f 30ff 	mov.w	r0, #4294967295
  8015afa:	4770      	bx	lr
- 8015afc:	2000f410 	.word	0x2000f410
+ 8015afc:	20014230 	.word	0x20014230
 
 08015b00 <_wait>:
  8015b00:	4b02      	ldr	r3, [pc, #8]	; (8015b0c <_wait+0xc>)
@@ -50743,7 +50743,7 @@ int _open(const uint8_t *path, int32_t flags, int32_t mode)
  8015b04:	601a      	str	r2, [r3, #0]
  8015b06:	f04f 30ff 	mov.w	r0, #4294967295
  8015b0a:	4770      	bx	lr
- 8015b0c:	2000f410 	.word	0x2000f410
+ 8015b0c:	20014230 	.word	0x20014230
 
 08015b10 <_unlink>:
  8015b10:	4b02      	ldr	r3, [pc, #8]	; (8015b1c <_unlink+0xc>)
@@ -50751,7 +50751,7 @@ int _open(const uint8_t *path, int32_t flags, int32_t mode)
  8015b14:	601a      	str	r2, [r3, #0]
  8015b16:	f04f 30ff 	mov.w	r0, #4294967295
  8015b1a:	4770      	bx	lr
- 8015b1c:	2000f410 	.word	0x2000f410
+ 8015b1c:	20014230 	.word	0x20014230
 
 08015b20 <_times>:
 	return -1;
@@ -50767,7 +50767,7 @@ int _times(struct tms *buf)
 }
  8015b26:	f04f 30ff 	mov.w	r0, #4294967295
  8015b2a:	4770      	bx	lr
- 8015b2c:	2000f410 	.word	0x2000f410
+ 8015b2c:	20014230 	.word	0x20014230
 
 08015b30 <_stat>:
  8015b30:	4b02      	ldr	r3, [pc, #8]	; (8015b3c <_stat+0xc>)
@@ -50775,7 +50775,7 @@ int _times(struct tms *buf)
  8015b34:	601a      	str	r2, [r3, #0]
  8015b36:	f04f 30ff 	mov.w	r0, #4294967295
  8015b3a:	4770      	bx	lr
- 8015b3c:	2000f410 	.word	0x2000f410
+ 8015b3c:	20014230 	.word	0x20014230
 
 08015b40 <_symlink>:
  8015b40:	4b02      	ldr	r3, [pc, #8]	; (8015b4c <_symlink+0xc>)
@@ -50783,7 +50783,7 @@ int _times(struct tms *buf)
  8015b44:	601a      	str	r2, [r3, #0]
  8015b46:	f04f 30ff 	mov.w	r0, #4294967295
  8015b4a:	4770      	bx	lr
- 8015b4c:	2000f410 	.word	0x2000f410
+ 8015b4c:	20014230 	.word	0x20014230
 
 08015b50 <_link>:
   return -1;
@@ -50799,7 +50799,7 @@ int _link(const uint8_t *old, const uint8_t *new)
 }
  8015b56:	f04f 30ff 	mov.w	r0, #4294967295
  8015b5a:	4770      	bx	lr
- 8015b5c:	2000f410 	.word	0x2000f410
+ 8015b5c:	20014230 	.word	0x20014230
 
 08015b60 <_fork>:
 
@@ -50813,7 +50813,7 @@ int _fork(void)
 }
  8015b66:	f04f 30ff 	mov.w	r0, #4294967295
  8015b6a:	4770      	bx	lr
- 8015b6c:	2000f410 	.word	0x2000f410
+ 8015b6c:	20014230 	.word	0x20014230
 
 08015b70 <_execve>:
 
@@ -50827,7 +50827,7 @@ int _execve(const uint8_t *name, uint8_t * const *argv, uint8_t * const *env)
 }
  8015b76:	f04f 30ff 	mov.w	r0, #4294967295
  8015b7a:	4770      	bx	lr
- 8015b7c:	2000f410 	.word	0x2000f410
+ 8015b7c:	20014230 	.word	0x20014230
 
 08015b80 <SystemInit>:
   */
@@ -51055,7 +51055,7 @@ void MX_TIM1_Init(void)
 }
  8015c90:	b00c      	add	sp, #48	; 0x30
  8015c92:	bd10      	pop	{r4, pc}
- 8015c94:	2000f350 	.word	0x2000f350
+ 8015c94:	20014170 	.word	0x20014170
  8015c98:	40010000 	.word	0x40010000
 
 08015c9c <MX_TIM3_Init>:
@@ -51137,7 +51137,7 @@ void MX_TIM3_Init(void)
  8015cea:	b00c      	add	sp, #48	; 0x30
  8015cec:	bd10      	pop	{r4, pc}
  8015cee:	bf00      	nop
- 8015cf0:	2000f2d8 	.word	0x2000f2d8
+ 8015cf0:	200140f8 	.word	0x200140f8
  8015cf4:	40000400 	.word	0x40000400
 
 08015cf8 <MX_TIM6_Init>:
@@ -51200,7 +51200,7 @@ void MX_TIM6_Init(void)
  8015d30:	bd10      	pop	{r4, pc}
  8015d32:	bf00      	nop
  8015d34:	40001000 	.word	0x40001000
- 8015d38:	2000f314 	.word	0x2000f314
+ 8015d38:	20014134 	.word	0x20014134
 
 08015d3c <HAL_TIM_Encoder_MspInit>:
   HAL_TIM_MspPostInit(&htim8);
@@ -51662,7 +51662,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
 }
  8015fd8:	b00a      	add	sp, #40	; 0x28
  8015fda:	bd10      	pop	{r4, pc}
- 8015fdc:	2000f38c 	.word	0x2000f38c
+ 8015fdc:	200141ac 	.word	0x200141ac
 
 08015fe0 <MX_TIM4_Init>:
 {
@@ -51739,7 +51739,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
 }
  8016048:	b00a      	add	sp, #40	; 0x28
  801604a:	bd10      	pop	{r4, pc}
- 801604c:	2000f29c 	.word	0x2000f29c
+ 801604c:	200140bc 	.word	0x200140bc
  8016050:	40000800 	.word	0x40000800
 
 08016054 <MX_TIM8_Init>:
@@ -51865,7 +51865,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
 }
  8016100:	b010      	add	sp, #64	; 0x40
  8016102:	bd10      	pop	{r4, pc}
- 8016104:	2000f260 	.word	0x2000f260
+ 8016104:	20014080 	.word	0x20014080
  8016108:	40010400 	.word	0x40010400
 
 0801610c <HAL_TIM_Encoder_MspDeInit>:
@@ -55066,9 +55066,9 @@ void testturning(parameter_speed Howspeed,int turnmode,char funmode,int funduty)
  8017e04:	f7ff fe3a 	bl	8017a7c <V90L>
  8017e08:	e713      	b.n	8017c32 <testturning+0x4e>
  8017e0a:	bf00      	nop
- 8017e0c:	2000f29c 	.word	0x2000f29c
+ 8017e0c:	200140bc 	.word	0x200140bc
  8017e10:	20004abc 	.word	0x20004abc
- 8017e14:	2000f010 	.word	0x2000f010
+ 8017e14:	20013e30 	.word	0x20013e30
  8017e18:	20004c2c 	.word	0x20004c2c
 
 08017e1c <MX_UART4_Init>:
@@ -55117,7 +55117,7 @@ void MX_UART4_Init(void)
  8017e44:	f7f5 bc0e 	b.w	800d664 <Error_Handler>
  8017e48:	bd08      	pop	{r3, pc}
  8017e4a:	bf00      	nop
- 8017e4c:	2000f3c8 	.word	0x2000f3c8
+ 8017e4c:	200141e8 	.word	0x200141e8
  8017e50:	40004c00 	.word	0x40004c00
 
 08017e54 <HAL_UART_MspInit>:
@@ -55263,8 +55263,8 @@ void wait_ms(uint32_t waitTime) {
 
 }
  8017f02:	4770      	bx	lr
- 8017f04:	2000f314 	.word	0x2000f314
- 8017f08:	2000f25c 	.word	0x2000f25c
+ 8017f04:	20014134 	.word	0x20014134
+ 8017f08:	2001407c 	.word	0x2001407c
 
 08017f0c <yellow_off>:
 
@@ -55517,16 +55517,16 @@ if(yy8 >= 1){
  80180a0:	e8bd 47f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	HAL_GPIO_WritePin(LED8_GPIO_Port,LED8_Pin,GPIO_PIN_RESET);
  80180a4:	f7ea ba94 	b.w	80025d0 <HAL_GPIO_WritePin>
- 80180a8:	2000f409 	.word	0x2000f409
- 80180ac:	2000f40f 	.word	0x2000f40f
- 80180b0:	2000f408 	.word	0x2000f408
- 80180b4:	2000f40b 	.word	0x2000f40b
- 80180b8:	2000f40a 	.word	0x2000f40a
- 80180bc:	2000f40e 	.word	0x2000f40e
- 80180c0:	2000f40c 	.word	0x2000f40c
+ 80180a8:	20014229 	.word	0x20014229
+ 80180ac:	2001422f 	.word	0x2001422f
+ 80180b0:	20014228 	.word	0x20014228
+ 80180b4:	2001422b 	.word	0x2001422b
+ 80180b8:	2001422a 	.word	0x2001422a
+ 80180bc:	2001422e 	.word	0x2001422e
+ 80180c0:	2001422c 	.word	0x2001422c
  80180c4:	40020800 	.word	0x40020800
  80180c8:	40020400 	.word	0x40020400
- 80180cc:	2000f40d 	.word	0x2000f40d
+ 80180cc:	2001422d 	.word	0x2001422d
 
 080180d0 <strlen>:
  80180d0:	4603      	mov	r3, r0
@@ -57151,28 +57151,28 @@ int main(void) {
 			break;
  80191cc:	e753      	b.n	8019076 <main+0x1e6>
  80191ce:	bf00      	nop
- 80191d0:	2000f350 	.word	0x2000f350
- 80191d4:	2000f260 	.word	0x2000f260
+ 80191d0:	20014170 	.word	0x20014170
+ 80191d4:	20014080 	.word	0x20014080
  80191d8:	00000000 	.word	0x00000000
  80191dc:	2000322c 	.word	0x2000322c
- 80191e0:	2000f38c 	.word	0x2000f38c
- 80191e4:	2000f2d8 	.word	0x2000f2d8
- 80191e8:	2000f29c 	.word	0x2000f29c
- 80191ec:	2000f314 	.word	0x2000f314
- 80191f0:	2000eef8 	.word	0x2000eef8
+ 80191e0:	200141ac 	.word	0x200141ac
+ 80191e4:	200140f8 	.word	0x200140f8
+ 80191e8:	200140bc 	.word	0x200140bc
+ 80191ec:	20014134 	.word	0x20014134
+ 80191f0:	20013d18 	.word	0x20013d18
  80191f4:	20004624 	.word	0x20004624
  80191f8:	200041f2 	.word	0x200041f2
  80191fc:	44c80000 	.word	0x44c80000
- 8019200:	2000f0d2 	.word	0x2000f0d2
+ 8019200:	20013ef2 	.word	0x20013ef2
  8019204:	200031c0 	.word	0x200031c0
- 8019208:	2000f0fc 	.word	0x2000f0fc
+ 8019208:	20013f1c 	.word	0x20013f1c
  801920c:	20004618 	.word	0x20004618
  8019210:	20004ba0 	.word	0x20004ba0
  8019214:	20003c34 	.word	0x20003c34
  8019218:	2000483c 	.word	0x2000483c
  801921c:	200041e4 	.word	0x200041e4
- 8019220:	2000f000 	.word	0x2000f000
- 8019224:	2000e884 	.word	0x2000e884
+ 8019220:	20013e20 	.word	0x20013e20
+ 8019224:	200136a4 	.word	0x200136a4
  8019228:	40020400 	.word	0x40020400
  801922c:	40020000 	.word	0x40020000
  8019230:	20004abc 	.word	0x20004abc
@@ -57192,7 +57192,7 @@ int main(void) {
  8019268:	20000258 	.word	0x20000258
  801926c:	20004c2c 	.word	0x20004c2c
  8019270:	20004098 	.word	0x20004098
- 8019274:	2000f010 	.word	0x2000f010
+ 8019274:	20013e30 	.word	0x20013e30
  8019278:	42b40000 	.word	0x42b40000
  801927c:	c2b40000 	.word	0xc2b40000
 		switch (MODE) {
@@ -57554,7 +57554,7 @@ int main(void) {
  8019654:	f7fe fa12 	bl	8017a7c <V90L>
  8019658:	f000 bcd8 	b.w	801a00c <main+0x117c>
  801965c:	40020000 	.word	0x40020000
- 8019660:	2000f260 	.word	0x2000f260
+ 8019660:	20014080 	.word	0x20014080
  8019664:	43c80000 	.word	0x43c80000
  8019668:	20004bb0 	.word	0x20004bb0
  801966c:	453b8000 	.word	0x453b8000
@@ -57570,7 +57570,7 @@ int main(void) {
  8019694:	42260000 	.word	0x42260000
  8019698:	42e60000 	.word	0x42e60000
  801969c:	20003ea4 	.word	0x20003ea4
- 80196a0:	2000f29c 	.word	0x2000f29c
+ 80196a0:	200140bc 	.word	0x200140bc
 		switch (MODE) {
  80196a4:	2cf6      	cmp	r4, #246	; 0xf6
  80196a6:	f000 859b 	beq.w	801a1e0 <main+0x1350>
@@ -57756,38 +57756,37 @@ int main(void) {
  801981c:	2064      	movs	r0, #100	; 0x64
  801981e:	f7e6 fd57 	bl	80002d0 <HAL_Delay>
 			wall_control_mode = 6;
- 8019822:	4a88      	ldr	r2, [pc, #544]	; (8019a44 <main+0xbb4>)
-				record_mode_gyro = 1;
- 8019824:	4b88      	ldr	r3, [pc, #544]	; (8019a48 <main+0xbb8>)
- 8019826:	9353      	str	r3, [sp, #332]	; 0x14c
-			wall_control_mode = 6;
- 8019828:	2106      	movs	r1, #6
- 801982a:	7011      	strb	r1, [r2, #0]
+ 8019822:	4b88      	ldr	r3, [pc, #544]	; (8019a44 <main+0xbb4>)
+ 8019824:	2206      	movs	r2, #6
+ 8019826:	701a      	strb	r2, [r3, #0]
 			STBYON;
- 801982c:	4630      	mov	r0, r6
- 801982e:	4622      	mov	r2, r4
- 8019830:	f44f 5100 	mov.w	r1, #8192	; 0x2000
-				record_mode_gyro = 1;
- 8019834:	701c      	strb	r4, [r3, #0]
-			STBYON;
- 8019836:	f7e8 fecb 	bl	80025d0 <HAL_GPIO_WritePin>
+ 8019828:	f44f 5100 	mov.w	r1, #8192	; 0x2000
+ 801982c:	4622      	mov	r2, r4
+ 801982e:	4630      	mov	r0, r6
+ 8019830:	f7e8 fece 	bl	80025d0 <HAL_GPIO_WritePin>
 			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,150);
- 801983a:	f8d9 2000 	ldr.w	r2, [r9]
- 801983e:	2196      	movs	r1, #150	; 0x96
- 8019840:	63d1      	str	r1, [r2, #60]	; 0x3c
+ 8019834:	f8d9 3000 	ldr.w	r3, [r9]
+ 8019838:	2296      	movs	r2, #150	; 0x96
+ 801983a:	63da      	str	r2, [r3, #60]	; 0x3c
 					HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
- 8019842:	4648      	mov	r0, r9
- 8019844:	2108      	movs	r1, #8
- 8019846:	f7eb fec1 	bl	80055cc <HAL_TIM_PWM_Start>
-					HAL_Delay(1000);
- 801984a:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
- 801984e:	f7e6 fd3f 	bl	80002d0 <HAL_Delay>
+ 801983c:	2108      	movs	r1, #8
+ 801983e:	4648      	mov	r0, r9
+ 8019840:	f7eb fec4 	bl	80055cc <HAL_TIM_PWM_Start>
+					HAL_Delay(5000);
+ 8019844:	f241 3088 	movw	r0, #5000	; 0x1388
+ 8019848:	f7e6 fd42 	bl	80002d0 <HAL_Delay>
 					reset_ICM();
- 8019852:	f7f3 f881 	bl	800c958 <reset_ICM>
+ 801984c:	f7f3 f884 	bl	800c958 <reset_ICM>
+					record_mode_gyro = 1;
+ 8019850:	4b7d      	ldr	r3, [pc, #500]	; (8019a48 <main+0xbb8>)
+ 8019852:	9353      	str	r3, [sp, #332]	; 0x14c
 					r_blue_on;
- 8019856:	4622      	mov	r2, r4
- 8019858:	2102      	movs	r1, #2
- 801985a:	4630      	mov	r0, r6
+ 8019854:	4622      	mov	r2, r4
+ 8019856:	2102      	movs	r1, #2
+ 8019858:	4630      	mov	r0, r6
+					record_mode_gyro = 1;
+ 801985a:	701c      	strb	r4, [r3, #0]
+					r_blue_on;
  801985c:	f7e8 feb8 	bl	80025d0 <HAL_GPIO_WritePin>
 					l_blue_on;
  8019860:	4622      	mov	r2, r4
@@ -58009,23 +58008,23 @@ int main(void) {
 			break;
  8019a1a:	f7ff bb2c 	b.w	8019076 <main+0x1e6>
  8019a1e:	bf00      	nop
- 8019a20:	2000f29c 	.word	0x2000f29c
+ 8019a20:	200140bc 	.word	0x200140bc
  8019a24:	20003d64 	.word	0x20003d64
  8019a28:	200040d4 	.word	0x200040d4
  8019a2c:	20004110 	.word	0x20004110
  8019a30:	2000414c 	.word	0x2000414c
  8019a34:	20004098 	.word	0x20004098
  8019a38:	20003fe4 	.word	0x20003fe4
- 8019a3c:	2000f028 	.word	0x2000f028
+ 8019a3c:	20013e48 	.word	0x20013e48
  8019a40:	20004858 	.word	0x20004858
  8019a44:	20004bb0 	.word	0x20004bb0
  8019a48:	2000485c 	.word	0x2000485c
  8019a4c:	20004abc 	.word	0x20004abc
- 8019a50:	2000efd4 	.word	0x2000efd4
+ 8019a50:	20013df4 	.word	0x20013df4
  8019a54:	2000485d 	.word	0x2000485d
  8019a58:	40020000 	.word	0x40020000
  8019a5c:	20004c18 	.word	0x20004c18
- 8019a60:	2000f0d2 	.word	0x2000f0d2
+ 8019a60:	20013ef2 	.word	0x20013ef2
  8019a64:	43c80000 	.word	0x43c80000
  8019a68:	464b2000 	.word	0x464b2000
  8019a6c:	453b8000 	.word	0x453b8000
@@ -58291,27 +58290,27 @@ int main(void) {
  8019ca8:	2000409c 	.word	0x2000409c
  8019cac:	45bb8000 	.word	0x45bb8000
  8019cb0:	45034000 	.word	0x45034000
- 8019cb4:	2000f0d2 	.word	0x2000f0d2
+ 8019cb4:	20013ef2 	.word	0x20013ef2
  8019cb8:	464b2000 	.word	0x464b2000
  8019cbc:	45dac000 	.word	0x45dac000
  8019cc0:	43fa0000 	.word	0x43fa0000
  8019cc4:	20003fe4 	.word	0x20003fe4
- 8019cc8:	2000f028 	.word	0x2000f028
+ 8019cc8:	20013e48 	.word	0x20013e48
  8019ccc:	20004858 	.word	0x20004858
  8019cd0:	40020000 	.word	0x40020000
- 8019cd4:	2000f260 	.word	0x2000f260
+ 8019cd4:	20014080 	.word	0x20014080
  8019cd8:	2000485d 	.word	0x2000485d
  8019cdc:	2000485c 	.word	0x2000485c
  8019ce0:	20004c18 	.word	0x20004c18
- 8019ce4:	2000f29c 	.word	0x2000f29c
+ 8019ce4:	200140bc 	.word	0x200140bc
  8019ce8:	20003540 	.word	0x20003540
  8019cec:	0801cbf6 	.word	0x0801cbf6
  8019cf0:	20004bb0 	.word	0x20004bb0
  8019cf4:	00000000 	.word	0x00000000
  8019cf8:	439ac000 	.word	0x439ac000
- 8019cfc:	2000ed4c 	.word	0x2000ed4c
+ 8019cfc:	20013b6c 	.word	0x20013b6c
  8019d00:	42b40000 	.word	0x42b40000
- 8019d04:	2000efd4 	.word	0x2000efd4
+ 8019d04:	20013df4 	.word	0x20013df4
  8019d08:	200041f2 	.word	0x200041f2
  8019d0c:	43c80000 	.word	0x43c80000
 			STBYON;
@@ -58666,7 +58665,7 @@ int main(void) {
  801a0ec:	2000485d 	.word	0x2000485d
  801a0f0:	40020000 	.word	0x40020000
  801a0f4:	20003ea4 	.word	0x20003ea4
- 801a0f8:	2000f29c 	.word	0x2000f29c
+ 801a0f8:	200140bc 	.word	0x200140bc
 			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,160);
  801a0fc:	f8df 9200 	ldr.w	r9, [pc, #512]	; 801a300 <main+0x1470>
 			turn45inL(speed800.turn45in_L, connect);
@@ -58902,8 +58901,8 @@ int main(void) {
  801a2f2:	f7fe bec0 	b.w	8019076 <main+0x1e6>
  801a2f6:	bf00      	nop
  801a2f8:	20003ea4 	.word	0x20003ea4
- 801a2fc:	2000ed4c 	.word	0x2000ed4c
- 801a300:	2000f29c 	.word	0x2000f29c
+ 801a2fc:	20013b6c 	.word	0x20013b6c
+ 801a300:	200140bc 	.word	0x200140bc
  801a304:	20003d64 	.word	0x20003d64
  801a308:	200040c0 	.word	0x200040c0
  801a30c:	200040e8 	.word	0x200040e8
@@ -58996,7 +58995,7 @@ LoopFillZerobss:
   ldr  r2, =_sbss
  801a364:	200001e0 	.word	0x200001e0
   ldr  r3, = _ebss
- 801a368:	2000f414 	.word	0x2000f414
+ 801a368:	20014234 	.word	0x20014234
 
 0801a36c <CAN1_RX0_IRQHandler>:
  * @retval None       
@@ -63038,7 +63037,7 @@ Infinite_Loop:
  801c97a:	b103      	cbz	r3, 801c97e <_sbrk_r+0x1a>
  801c97c:	602b      	str	r3, [r5, #0]
  801c97e:	bd38      	pop	{r3, r4, r5, pc}
- 801c980:	2000f410 	.word	0x2000f410
+ 801c980:	20014230 	.word	0x20014230
 
 0801c984 <__sread>:
  801c984:	b510      	push	{r4, lr}
@@ -63116,7 +63115,7 @@ Infinite_Loop:
  801ca26:	b103      	cbz	r3, 801ca2a <_write_r+0x1e>
  801ca28:	602b      	str	r3, [r5, #0]
  801ca2a:	bd38      	pop	{r3, r4, r5, pc}
- 801ca2c:	2000f410 	.word	0x2000f410
+ 801ca2c:	20014230 	.word	0x20014230
 
 0801ca30 <_close_r>:
  801ca30:	b538      	push	{r3, r4, r5, lr}
@@ -63132,7 +63131,7 @@ Infinite_Loop:
  801ca46:	b103      	cbz	r3, 801ca4a <_close_r+0x1a>
  801ca48:	602b      	str	r3, [r5, #0]
  801ca4a:	bd38      	pop	{r3, r4, r5, pc}
- 801ca4c:	2000f410 	.word	0x2000f410
+ 801ca4c:	20014230 	.word	0x20014230
 
 0801ca50 <_fstat_r>:
  801ca50:	b538      	push	{r3, r4, r5, lr}
@@ -63150,7 +63149,7 @@ Infinite_Loop:
  801ca6a:	602b      	str	r3, [r5, #0]
  801ca6c:	bd38      	pop	{r3, r4, r5, pc}
  801ca6e:	bf00      	nop
- 801ca70:	2000f410 	.word	0x2000f410
+ 801ca70:	20014230 	.word	0x20014230
 
 0801ca74 <_isatty_r>:
  801ca74:	b538      	push	{r3, r4, r5, lr}
@@ -63166,7 +63165,7 @@ Infinite_Loop:
  801ca8a:	b103      	cbz	r3, 801ca8e <_isatty_r+0x1a>
  801ca8c:	602b      	str	r3, [r5, #0]
  801ca8e:	bd38      	pop	{r3, r4, r5, pc}
- 801ca90:	2000f410 	.word	0x2000f410
+ 801ca90:	20014230 	.word	0x20014230
 
 0801ca94 <_lseek_r>:
  801ca94:	b538      	push	{r3, r4, r5, lr}
@@ -63184,7 +63183,7 @@ Infinite_Loop:
  801caae:	b103      	cbz	r3, 801cab2 <_lseek_r+0x1e>
  801cab0:	602b      	str	r3, [r5, #0]
  801cab2:	bd38      	pop	{r3, r4, r5, pc}
- 801cab4:	2000f410 	.word	0x2000f410
+ 801cab4:	20014230 	.word	0x20014230
 
 0801cab8 <__ascii_mbtowc>:
  801cab8:	b082      	sub	sp, #8
@@ -63227,7 +63226,7 @@ Infinite_Loop:
  801cafa:	b103      	cbz	r3, 801cafe <_read_r+0x1e>
  801cafc:	602b      	str	r3, [r5, #0]
  801cafe:	bd38      	pop	{r3, r4, r5, pc}
- 801cb00:	2000f410 	.word	0x2000f410
+ 801cb00:	20014230 	.word	0x20014230
 
 0801cb04 <__ascii_wctomb>:
  801cb04:	b149      	cbz	r1, 801cb1a <__ascii_wctomb+0x16>

@@ -208,10 +208,10 @@ void interrupt_ICM(void) {
 	}
 	angle_speed_ave[0] = (gyro.omega_z - a_speed) * 90 / 96;
 
-	angle_speed = (angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
+	angle_speed = ((angle_speed_ave[0] + angle_speed_ave[1] + angle_speed_ave[2]
 			+ angle_speed_ave[3] + angle_speed_ave[4] + angle_speed_ave[5]
 			+ angle_speed_ave[6] + angle_speed_ave[7] + angle_speed_ave[8]
-			+ angle_speed_ave[9]) / 10;
+			+ angle_speed_ave[9]) / 10);
 	//angle_speed=(gyro.omega_z-a_speed)*90/94;//deg/sec
 	angle += 0.001 * angle_speed; //deg
 	anglex += 0.001 * (gyro.omega_x - a_speedx); //deg
