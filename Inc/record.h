@@ -18,14 +18,14 @@ int a;
 
 char record_mode_sensor;
 int o;
-int SEN_record[5][1500];
-int SEN_recordD[5][1500];
+int SEN_record[5][15];
+int SEN_recordD[5][15];
 
 
 
-float record1[1500];
-float record2[1500];
-float record3[1500];
+float record1[10000];
+float record2[20];
+float record3[20];
 char record_mode_gyro;
 int q;
 

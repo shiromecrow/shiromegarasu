@@ -240,6 +240,7 @@ int main(void) {
 //			angle=0;
 			HAL_Delay(1000);
 			reset_ICM();
+			HAL_Delay(100);
 			//__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,160);
 			//HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 				record_mode_gyro = 1;
@@ -269,7 +270,7 @@ int main(void) {
 //									slalomR(speed500.slalom_R, OFF);
 //									straight_table(90, 500, 0, 500, 6000);
 			//straight_table(((90 *1.414* 6)), 0, 0, 1500, 6000);
-			slalom_table(180, 0, 400, 13000);
+			//slalom_table(180, 0, 400, 13000);
 			//straight_table((90 * 8), 1200, 1200,
 			//						2100, 6000);
 			//straight_table(180, (E_speedR + E_speedL) / 2, 0, (E_speedR + E_speedL) / 2,
@@ -289,6 +290,19 @@ int main(void) {
 			//			HAL_TIM_PWM_Stop(&htim8, TIM_CHANNEL_3);
 			//			HAL_TIM_PWM_Stop(&htim8, TIM_CHANNEL_4);
 			//
+			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,150);
+					HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
+					HAL_Delay(1000);
+					reset_ICM();
+					r_blue_on;
+					l_blue_on;
+					STBYON;
+					enc.sigma_error = 0;
+					Gyro.sigma_error = 0;
+					no_angle();
+
+					HAL_TIM_PWM_Stop(&htim4, TIM_CHANNEL_3);
+
 
 			record_mode_enc = 0;
 			record_mode_sensor = 0;
@@ -335,7 +349,7 @@ int main(void) {
 			//ÉWÉÉÉCÉçê≥ãKï™ïz*********************************************
 			break;
 		case 3:
-			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,120);
+			__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,150);
 			HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 			HAL_Delay(1000);
 			reset_ICM();
