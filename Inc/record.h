@@ -17,24 +17,27 @@
 int a;
 
 char record_mode_sensor;
-int o;
+
+
+#define max_record 15000
+
 int SEN_record[5][15];
 int SEN_recordD[5][15];
 
-
-
-float record1[15000];
-float record2[20];
-float record3[20];
+float record1[4000];
+float record2[4000];
+float record3[4000];
 char record_mode_gyro;
-int q;
 
 
-float record4[40];//í«è]óp
-float record5[40];//í«è]óp
+
+float record4[4000];//í«è]óp
+float record5[4000];//í«è]óp
 float record6[40];
 int record_mode_enc;
 int p;
+int q;
+int o;
 
 
 void record_reset(void);

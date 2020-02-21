@@ -32,16 +32,20 @@ void record_in_enc(void) {
 //				record5[p] = (record_ideal_speed[p] / V_batt * MAXMOTOR);
 //				record6[p]=(float) (duty_R);
 		p++;
+		if (p >= max_record) {
+			record_mode_enc=0;
+		}
 	}
+
 }
 
 void record_in_gyro(void) {
 	if (record_mode_gyro == 1) {
-			record1[q] = angle_speed;
-		//	record2[q]=Turn_ideal_speed;
-		//	record3[q] = angle;
-//					record4[q] = -E_speedL;
-//					record5[q]=(E_speedR+E_speedL)/2;
+		record1[q] = angle_speed;
+			record2[q]=Turn_ideal_speed;
+			record3[q] = Gyro.error;
+					record4[q] = Gyro.sigma_error;
+					record5[q]=Gyro.delta_error;
 //					record6[q] = ideal_speed;
 //		record1[q] = Ksp*(ideal_speed - (E_speedR + E_speedL) / 2);
 //			record2[q]=Ksi*enc.sigma_error;
@@ -51,6 +55,9 @@ void record_in_gyro(void) {
 //					record6[q] = Ktd*Gyro.delta_error;
 
 		q++;
+		if (q >= max_record) {
+					record_mode_gyro = 0;
+				}
 	}
 }
 
@@ -58,16 +65,19 @@ void record_in_sen(void) {
 	int sensor_num = 0;
 	if (record_mode_sensor == 1) {
 		for (sensor_num = 0; sensor_num <= 4; sensor_num++) {
-			SEN_record[sensor_num][o]=SEN[sensor_num][0];
-			SEN_recordD[sensor_num][o]=SEND[sensor_num];
+			SEN_record[sensor_num][o] = SEN[sensor_num][0];
+			SEN_recordD[sensor_num][o] = SEND[sensor_num];
 		}
-		record1[o] = (E_distanceR+E_distanceL)/2;
+		record1[o] = (E_distanceR + E_distanceL) / 2;
 //		record2[o] = (float)(slantRSEN);
 //		record3[o] = (float)(slantLSEN);
 //		SEN_recordD[0][o]=SEND[0];
 //		SEN_recordD[4][o]=SEND[4];
 
 		o++;
+		if (o >= max_record) {
+			record_mode_sensor = 0;
+				}
 	}
 }
 
@@ -81,7 +91,7 @@ void record_out_enc(void) {
 
 void record_out_gyro(void) {
 	for (a = 0; a <= q; a++) {
-		printf("%d,%f\n", a,record1[a]);
+		printf("%d,%f\n", a, record1[a]);
 	}
 }
 
@@ -91,6 +101,7 @@ void record_out_sen(void) {
 //				SEN_recordD[0][a], SEN_record[1][a], SEN_recordD[1][a],
 //				SEN_record[2][a], SEN_recordD[2][a], SEN_record[3][a],
 //				SEN_recordD[3][a], SEN_record[4][a], SEN_recordD[4][a]);
-		printf("%d,%f,%d,%d,%d,%d\n", a, record1[a], SEN_record[1][a],SEN_record[0][a],SEN_record[3][a],SEN_record[4][a]);
+		printf("%d,%f,%d,%d,%d,%d\n", a, record1[a], SEN_record[1][a],
+				SEN_record[0][a], SEN_record[3][a], SEN_record[4][a]);
 	}
 }
