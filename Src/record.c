@@ -85,13 +85,14 @@ void record_out_enc(void) {
 
 	for (a = 0; a <= p; a++) {
 		printf("%d,%f,%f,%f,%f,%f,%f\n", a, record1[a], record2[a], record3[a],
-				record4[a], record5[a], record6[a]);
+				record4[a], record5[a],record6[a]);
 	}
 }
 
 void record_out_gyro(void) {
 	for (a = 0; a <= q; a++) {
-		printf("%d,%f\n", a, record1[a]);
+		printf("%d,%f,%f,%f,%f,%f\n", a, record1[a], record2[a], record3[a],
+						record4[a], record5[a]);
 	}
 }
 

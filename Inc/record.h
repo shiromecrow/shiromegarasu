@@ -19,7 +19,7 @@ int a;
 char record_mode_sensor;
 
 
-#define max_record 15000
+#define max_record 4000
 
 int SEN_record[5][15];
 int SEN_recordD[5][15];

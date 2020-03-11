@@ -3,5 +3,5 @@ record.c:19:6:record_in_enc	12	static
 record.c:42:6:record_in_gyro	16	static
 record.c:64:6:record_in_sen	36	static
 record.c:84:6:record_out_enc	80	static
-record.c:92:6:record_out_gyro	24	static
-record.c:98:6:record_out_sen	40	static
+record.c:92:6:record_out_gyro	72	static
+record.c:99:6:record_out_sen	40	static

@@ -294,7 +294,7 @@ int main(void) {
 					HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 					HAL_Delay(5000);
 					reset_ICM();
-					record_mode_gyro = 1;
+				//	record_mode_gyro = 1;
 					r_blue_on;
 					l_blue_on;
 					STBYON;
