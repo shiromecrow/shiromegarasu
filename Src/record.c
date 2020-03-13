@@ -42,7 +42,7 @@ void record_in_enc(void) {
 void record_in_gyro(void) {
 	if (record_mode_gyro == 1) {
 		record1[q] = angle_speed;
-			record2[q]=Turn_ideal_speed;
+			//record2[q]=Turn_ideal_speed;
 			record3[q] = Gyro.error;
 					record4[q] = Gyro.sigma_error;
 					record5[q]=Gyro.delta_error;
@@ -91,7 +91,7 @@ void record_out_enc(void) {
 
 void record_out_gyro(void) {
 	for (a = 0; a <= q; a++) {
-		printf("%d,%f,%f,%f,%f,%f\n", a, record1[a], record2[a], record3[a],
+		printf("%d,%f,%f,%f,%f\n", a, record1[a], record3[a],
 						record4[a], record5[a]);
 	}
 }

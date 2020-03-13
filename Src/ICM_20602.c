@@ -175,6 +175,7 @@ void reset_ICM(void) {
 	int s = 0;
 	angle = 0;
 	for (s = 1; s <= 1000; s++) {
+		ICM20602_DataUpdate();
 		a_speed += gyro.omega_z;
 		a_speedx += gyro.omega_x;
 		acc0 += gyro.accel_y;

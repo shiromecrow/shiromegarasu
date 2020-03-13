@@ -5,4 +5,4 @@ ICM_20602.c:122:7:ICM20602_GYRO_READ	16	static
 ICM_20602.c:135:7:ICM20602_ACCEL_READ	16	static
 ICM_20602.c:148:6:ICM20602_DataUpdate	8	static
 ICM_20602.c:174:6:reset_ICM	32	static
-ICM_20602.c:197:6:interrupt_ICM	40	static
+ICM_20602.c:198:6:interrupt_ICM	40	static

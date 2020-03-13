@@ -1138,6 +1138,9 @@ modeacc = 3;
 while (SEN_on[0] <= 300 || SEN_on[2] <= 900 || SEN_on[4] <= 300) {
 
 	HAL_Delay(1);
+	if(q >= max_record){
+		break;
+	}
 }
 
 HAL_TIM_PWM_Stop_IT(&htim8, TIM_CHANNEL_4);

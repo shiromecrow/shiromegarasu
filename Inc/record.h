@@ -25,7 +25,7 @@ int SEN_record[5][15];
 int SEN_recordD[5][15];
 
 float record1[4000];
-float record2[4000];
+float record2[4];
 float record3[4000];
 char record_mode_gyro;
 
